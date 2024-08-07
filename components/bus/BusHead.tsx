@@ -17,7 +17,7 @@ export default function BusHead() {
       </Grid>
       <Container my="md">
         <p>
-          Trip Wagon Holidays is the largest leading service provider of tourist bus rentals in
+        Cochin Dream Destinations Holidays is the largest leading service provider of tourist bus rentals in
           Kerala with our wide fleet of owned vehicles along with specially trained drivers in
           tourism with good knowledge to render safe travel across “Gods Own Country”
         </p>

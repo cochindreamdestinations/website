@@ -18,7 +18,7 @@ export default function UrbaniaHead() {
       </Grid>
       <Container my="md">
         <p>
-          Trip Wagon Holidays proudly introduce the next level of luxury travel with its wide range
+        Cochin Dream Destinations Holidays proudly introduce the next level of luxury travel with its wide range
           of Premium Urbania rentals in Kerala for tourism services. Looking to book Urbania in
           Kochi? Call Us right now for best deals on Urbania Taxi. Pepper Kerala Holidays is the
           largest leading service provider of Urbania rentals in Kerala with our exclusively owned

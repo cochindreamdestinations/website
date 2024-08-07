@@ -18,7 +18,7 @@ export default async function PlaceBanner({ result }: PlaceBannerProps) {
         EXPLORING DESTINATIONS WITH PASSION
       </Title>
       <Text>
-        Trip Wagon is the most prominent holiday makers when it comes to transportation with well
+      Cochin Dream Destinations is the most prominent holiday makers when it comes to transportation with well
         experienced chauffer cum guide. We are dedicated to providing our customers the best holiday
         experiences without compromising in service quality. We have a team of well experienced
         staff to assist and guide you to feel the beauty of nature and enjoy their holidays at God's

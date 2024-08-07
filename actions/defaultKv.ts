@@ -1875,7 +1875,7 @@ export const DefaultReviews = async () => {
     },
     {
       reviewer: 'Gopinath P',
-      text: 'We had trip from Cochin to Munnar to Thekkady to Cochin with Trip Wagon Holidays Kerala Taxi service. It was a nice trip with Gokul who taken care of our tour for entire 4 days. Very decent, very patience, very respectful. I will recommend this kochi taxi service company for my friends',
+      text: 'We had trip from Cochin to Munnar to Thekkady to Cochin with Cochin Dream Destinations Kerala Taxi service. It was a nice trip with Gokul who taken care of our tour for entire 4 days. Very decent, very patience, very respectful. I will recommend this kochi taxi service company for my friends',
     },
     {
       reviewer: 'Manish Singhal',

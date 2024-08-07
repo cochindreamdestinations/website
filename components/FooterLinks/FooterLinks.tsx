@@ -71,7 +71,7 @@ export function FooterLinks() {
             width={120}
             height={120}
             about="Cochin Dream Destinations Logo"
-            alt="Trip Wagon Logo"
+            alt="Cochin Dream Destinations Logo"
           />
           <Text size="xs" c="dimmed" className={classes.description}>
             Make your next trip memmorable and safe with us.
