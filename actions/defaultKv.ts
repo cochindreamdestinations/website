@@ -1883,7 +1883,7 @@ export const DefaultReviews = async () => {
     },
     {
       reviewer: 'Kavir Bhati ',
-      text: 'Service provided by TripWagon team was more from the expected level. My great experience started even before i begun my trip. They had upgraded my vehicle without any extra charges. Mr Sunil, the driver made the trip more memorable by bringing us to many different places.By that we went to more sights within short period of time.I would like to thank the whole team for their service. Keep up the good job.I would definitely recommend them',
+      text: 'Service provided by Cochin Dream Destinations team was more from the expected level. My great experience started even before i begun my trip. They had upgraded my vehicle without any extra charges. Mr Sunil, the driver made the trip more memorable by bringing us to many different places.By that we went to more sights within short period of time.I would like to thank the whole team for their service. Keep up the good job.I would definitely recommend them',
     },
   ];
   await kv.set('reviews', data);
