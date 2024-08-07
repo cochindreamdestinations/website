@@ -1,0 +1,21 @@
+.imageContainer img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.imageContainer img:hover {
+  transform: scale(1.2);
+}
+
+.darkbg {
+  background-color: chocolate;
+  color: antiquewhite;
+  font-size: '1em';
+}
+
+.borderOrange {
+  background: #f37420 none repeat scroll 0 0;
+  display: block;
+  height: 2px;
+  margin: 15px auto 20px;
+  width: 90px;
+}
