@@ -27,7 +27,7 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
 
 const MOCKDATA = [
   { title: 'Email', description: 'cochindreamdestinations@gmail.com', icon: IconAt },
-  { title: 'Phone', description: '+91 9744716911', icon: IconPhone },
+  { title: 'Phone', description: '+91 8547992024', icon: IconPhone },
   { title: 'Address', description: 'Somewhere near Kodungallur', icon: IconMapPin },
   { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
 ];

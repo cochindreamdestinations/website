@@ -10,7 +10,7 @@ export function HeroImageBackground() {
 
       <div className={classes.inner}>
         <Title className={classes.title}>
-          Trip Wagon | Kerala Cab Services
+        Cochin Dream Destinations | Kerala Cab Services
           <Text component="span" inherit className={classes.highlight}></Text>
         </Title>
 

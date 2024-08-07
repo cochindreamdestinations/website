@@ -16,7 +16,7 @@ export default function LeadingTaxiHead() {
         <Container my="md">
           <Grid.Col span={12}>
             <Center>
-              Trip Wagon is the leading service provider of tourist vehicles, kerala taxi packages
+              Cochin Dream Destinations is the leading service provider of tourist vehicles, kerala taxi packages
               in Kerala with our wide fleet of vehicles. We can deliver you these vehicles at any
               time and at anywhere in Kerala at the most economical rates. Our drivers are specially
               trained in tourism with good knowledge about Kerala geography to render memorable and
