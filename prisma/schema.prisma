@@ -14,59 +14,55 @@ datasource db {
 }
 
 model TouristPlace {
-  id        String   @id @default(cuid())
-  place     String
+  id          String @id @default(cuid())
+  place       String
   description String
-  image     String
-  category  String
+  image       String
+  category    String
 
   @@index([id, place])
 }
 
-
 model CarouselImages {
-  id        String   @id @default(cuid())
-  title     String
+  id           String   @id @default(cuid())
+  title        String
   vehicle_type String
-  list     String[]
+  list         String[]
 
   @@index([id, title])
 }
 
-
 model SightSeeingSpots {
-  id          Int      @id @default(autoincrement())
-  place_id    String   
-  sight_name  String
-  sight_image String
-  location    String
+  id              Int      @id @default(autoincrement())
+  place_id        String
+  sight_name      String
+  sight_image     String
+  location        String
   carousel_images String[]
 
   @@index([place_id, sight_name])
 }
 
 model User {
-  id                     String                   @id @default(cuid())
-  password               String?                  @db.VarChar(255)
-  email                  String                   @unique @db.VarChar
-  
+  id       String  @id @default(cuid())
+  password String? @db.VarChar(255)
+  email    String  @unique @db.VarChar
 }
 
 model VehiclesMaster {
-  id          String   @id @default(cuid())
-  name        String
+  id           String @id @default(cuid())
+  name         String
   vehicle_type String
-  description String
-  pax         Int
+  description  String
+  pax          Int
   extra_per_km Int
 }
 
-
 model VehicleRates {
-  id          Int      @id @default(autoincrement()) 
-  number_of_days String 
-  max_km       Int
-  vehicle_id String
-  ac_rate      Int
-  bata         Int
+  id             Int    @id @default(autoincrement())
+  number_of_days String
+  max_km         Int
+  vehicle_id     String
+  ac_rate        Int
+  bata           Int
 }
