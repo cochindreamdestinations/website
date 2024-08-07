@@ -11,6 +11,7 @@ import {
   AddUrbaniaDetails,
   DefaultReviews,
 } from '@/actions/defaultKv';
+import { saveVehicleRatesCar } from '@/actions/places';
 import getAllTravelerInsideImages, {
   getRateTableForId,
   getTravelerCarouselImages,
@@ -30,6 +31,9 @@ export default async function Defaultpage() {
   await DefaultReviews();
 
   await AddBusDefaults();
+
+ ;
+
 
   console.log('tempo carousel  ', await getTravelerCarouselImages());
 
