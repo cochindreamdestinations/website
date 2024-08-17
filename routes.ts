@@ -18,6 +18,8 @@ export const publicRoutes = [
   '/testimonials',
   '/airport',
   '/auth/new-verification',
+  '/init',
+  '/places',
 ];
 
 /**

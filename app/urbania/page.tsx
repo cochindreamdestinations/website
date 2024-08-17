@@ -10,15 +10,16 @@ import UrbaniaImage from '@/components/UrbaniaHead/UrbaniaImage';
 export default async function UrbaniaPage() {
   const results = await getAllUrbaniaTypes();
   const imagesList = await getUrbaniaCarouselImages();
+  
   const components = results?.map((item: Urbania) => (
     <div key={item.id} id={item.id}>
       <ServerCarousel
         title={item.description}
-        data={imagesList.filter((i: any) => i.id === item.id)[0]?.list}
+        data={imagesList.filter((i: any) => i.vehicle_type === item.vehicle_type)[0]?.list}
       />
       <RateTableComponent
         key={item.id}
-        id={item.id}
+        id={item.vehicle_type}
         extra_km={item.extra_per_km}
         description={item.description}
       />

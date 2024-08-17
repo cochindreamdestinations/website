@@ -21,7 +21,7 @@ export const getAllPlaces = async (): Promise<PlaceDataType[]> => {
  * Only used to add default values of places
  * @param formData
  */
-export const addDefaultValues = async (formData: FormData) => {
+export const addDefaultValuesForPlaces = async () => {
   'use server';
   try {
     const data = [
@@ -34,7 +34,64 @@ export const addDefaultValues = async (formData: FormData) => {
           'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/places/ae4mtinb0cacwj3f8uya',
         category: 'Beach',
       },
+      {
+        id: 'kovalam',
+        place: 'Kovalam',
+        description:
+          `Located in the vicinity of Kerala's capital city, Kovalam is famous for having many monuments of Travancore Kingdom and the place is also known as the land of padmanabha (Lord Vishnu). Recently got public attention for the treasures found in Padmanabhaswamy Temple, Visitors can explore the history of Travancore Kingdom from a couple of museums in the region. Other attractions are Kovalam Beach one of the calm beaches in South India, Trivandrum Zoo, Pridarsheny Planetarium, Poovar Estuary Island and Veli Boat Club where travellers can have some adventures water sports.`,
+        image:
+          'https://res.cloudinary.com/ds0bnfyym/image/upload/v1708797829/places/sightseeing/liqk5i64hluxmeactmpg.webp',
+        category: 'Beach',
+      },
+      {
+        id: 'munnar',
+        place: 'Munnar',
+        description:
+          `The most beautiful hill station in India. God has gifted the place with the romantic climate and the sober greenery of tea plantations over the hills. Luckily travellers can have the sights of wild Elephants. Eravikulam national park situated in the Anamudi Mountain the highest peak in south India having the rare species of Nilgiri Tahr (Mountain Goat). Munnar has become one of the best tourist destination of kerala and having lots of sightseeing locations like tea estates, spice plantations and activities like elephant Rides, Jeep safari, Theme Parks which will give the travellers a memorable experience.`,
+        image:
+          'https://res.cloudinary.com/ds0bnfyym/image/upload/v1708797829/places/sightseeing/oqgy8iluml32rydq1ne3.webp',
+        category: 'Hill Station',
+      },
+      {
+        id: 'vagamon',
+        place: 'Vagamon',
+        description:
+          `Vagamon hill station is situated 45 Km away from Thekkady. The place is one of the best hideouts for honeymoon couples and travellers who expects relaxation and to stay undisturbed from maddening crowd. Vagamon has a fantastic view of Western Ghats, tea plantations and enhancing pine forests. It’s an upcoming tourist destination and not much explored by travellers.The fog, green meadows and small streams will cool your eyes and refresh your mind.`,
+        image:
+          'https://res.cloudinary.com/ds0bnfyym/image/upload/v1708880128/places/sightseeing/lzmydvc7qn5yn10rftm5.webp',
+        category: 'Hill Station',
+      },
+      {
+        id: 'thekkady',
+        place: 'Thekkady',
+        description:
+          `The place is famous for its Wild life located in the border of Kerala and Tamilnadu. The nearby town is Kumily where travellers can purchase fresh and genuine spices directly from the local traders. The main attractions of thekkady is the Periyar Tiger Reserve where you can enjoy the Wild life boating, Trekking, Bamboo Rafting and nature Walk. Travellers can enjoy watching Martial Art shows, Kathakali Show (Traditional Dance form), Tribal Dance etc.. You can explore the natural Beauty of dense forest by Jungle Jeep Safari and chose a massage centre to experience the Kerala Ayurvedic massage.`,
+        image:
+          'https://res.cloudinary.com/ds0bnfyym/image/upload/v1708797830/places/sightseeing/eodg3gpobyuxj6kdjicm.webp',
+        category: 'Beach',
+      },
+      {
+        id: 'kanyakumari',
+        place: 'KanyaKumari',
+        description:
+          `The southern tip of India lays in the neighbouring state Tamilnadu. It’s the meeting point of the great Indian Ocean and the Arabian Sea. Kanyakumari is just 80 Km drive from Trivandrum. The place is famous for its unique Sun Set and Sun Rise View. The boating through the sea towards Vivekananda rock is a great experience, and it’s a famous pilgrim centre and visitors will not miss the Kanyakumari Devi Temple and the multi-coloured sands on the beach`,
+        image:
+          'https://res.cloudinary.com/ds0bnfyym/image/upload/v1708706874/places/fnwf5jrgpkygxpnzlwss.jpg',
+        category: 'Beach',
+      },
+      {
+        id: 'alappuzha',
+        place: 'Alappuzha',
+        description:
+          `Alleppey also known as the Venice of the East is listed as one of the top honeymoon destinations in the world by National Geographic, laid remarkable name in attracting tourists. Well known for the large networks of canals connecting small island villages. Tourists can enjoy shikara boating, house boats and motor boat cruise through the lake watching the paddy fields and endless views of coconut lagoons. The beaches of alleppey and Ravi Karunakaran museum are must see places in Alleppey.`,
+        image:
+          'https://res.cloudinary.com/ds0bnfyym/image/upload/v1708797828/places/sightseeing/grkdoczhuhtexchjvgyb.webp',
+        category: 'Backwaters',
+      },
+      
     ];
+
+    await db.touristPlace.deleteMany();
     const result = await db.touristPlace.createMany({ data: data });
     return result;
   } catch (e) {
@@ -52,7 +109,7 @@ export const getSightsBasedonId = async (id: string) => {
   return result;
 };
 
-export const addSightSeeing = async (formData: FormData) => {
+export const addSightSeeingDefaults = async () => {
   'use server';
   const data = [
     {

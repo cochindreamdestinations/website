@@ -2,12 +2,13 @@ import { db } from '@/lib/db';
 
 
 export interface Traveller {
-  id: string;
+  id:string;
+  vehicle_type: string;
   name: string;
   extra_per_km: number;
   description: string;
   pax: number;
-  image: string;
+  
 }
 
 export interface RateList {

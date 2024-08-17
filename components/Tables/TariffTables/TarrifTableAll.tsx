@@ -5,10 +5,22 @@ import Link from 'next/link';
 
 const data = [
   {
-    vehicle: 'Swift Dzire/Toyota Etios/Similar',
+    vehicle: 'Swift Dzire',
 
     pax: 3,
-    id: '/package#sedan_taxi',
+    id: '/package#swift_dzire',
+  },
+  {
+    vehicle: 'Swift ',
+
+    pax: 3,
+    id: '/package#swift',
+  },
+  {
+    vehicle: 'Toyota Etios',
+
+    pax: 3,
+    id: '/package#etios',
   },
   {
     vehicle: 'Suzuki Ertiga',
@@ -24,6 +36,11 @@ const data = [
     vehicle: 'Toyota Innova Crysta',
     pax: 6,
     id: '/package#crysta',
+  },
+  {
+    vehicle: 'Toyota Hycross',
+    pax: 6,
+    id: '/package#hycross',
   },
   {
     vehicle: 'Ultra Luxury Traveller',

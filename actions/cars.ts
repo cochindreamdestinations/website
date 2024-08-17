@@ -10,7 +10,29 @@ export async function getAllCars(id?: string) {
   'use server';
   const result: any = await db.vehiclesMaster.findMany({
     where: {
-      vehicle_type: 'car',
+      OR: [
+        {
+          vehicle_type: 'swift',
+        },
+        {
+          vehicle_type: 'swift_dzire',
+        },
+        {
+          vehicle_type: 'etios',
+        },
+        {
+          vehicle_type: 'ertiga',
+        },
+        {
+          vehicle_type: 'innova',
+        },
+        {
+          vehicle_type: 'hycross',
+        },
+        {
+          vehicle_type: 'crysta',
+        },
+      ],
     },
   });
   return id ? result?.filter((i: any) => i.id === id) : result;
@@ -20,7 +42,29 @@ export async function getCarCarouselImages() {
   'use server';
   const result = await db.carouselImages.findMany({
     where: {
-      vehicle_type: 'car',
+      OR:[
+        {
+          vehicle_type: 'swift',
+        },
+        {
+          vehicle_type: 'swift_dzire',
+        },
+        {
+          vehicle_type: 'etios',
+        },
+        {
+          vehicle_type: 'ertiga',
+        },
+        {
+          vehicle_type: 'innova',
+        },
+        {
+          vehicle_type: 'hycross',
+        },
+        {
+          vehicle_type: 'crysta',
+        },
+      ]
     },
   });
   return result;

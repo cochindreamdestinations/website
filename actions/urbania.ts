@@ -4,9 +4,10 @@ export interface Urbania {
   id: string;
   name: string;
   extra_per_km: number;
+  vehicle_type:string;
   description: string;
   pax: number;
-  image: string;
+  
 }
 
 export interface UrbaniaRate {
@@ -21,7 +22,12 @@ export interface UrbaniaRate {
 export default async function getAllUrbaniaTypes(id?: string) {
   const result: any = await db.vehiclesMaster.findMany({
     where: {
-      vehicle_type: 'urbania',
+      OR:[{
+      vehicle_type: 'urbania_15_luxury',
+
+      }, {
+        vehicle_type: 'urbania_15_premium'
+      }]
     },
   });
   return id ? result?.filter((i: any) => i.id === id) : result;
@@ -43,9 +49,12 @@ export const getUrbaniaCarouselImages = async (id?: string) => {
   'use server';
   const result: any = await db.carouselImages.findMany({
     where: {
-      AND: {
-        vehicle_type: 'urbania',
-      },
+      OR: [
+        {
+          vehicle_type: 'urbania_15_premium'
+        },
+        { vehicle_type: 'urbania_15_luxury' },
+      ],
     },
   });
   return id ? result.filter((i: any) => i.id === id) : result;

@@ -2,16 +2,18 @@ import getAllBusTypes from '@/actions/bus';
 import {
   AddBusDefaults,
   AddBusDetails,
-  AddDefaultValuesForCars,
-  AddDefaultValuesForCarsRate,
+  
   AddDefaultValuesForTraveller,
   AddDefaultValuesForTravellerRate,
   AddImagesForCarousel,
-  AddUrbaniaDefaults,
-  AddUrbaniaDetails,
   DefaultReviews,
 } from '@/actions/defaultKv';
-import { saveVehicleRatesCar } from '@/actions/places';
+import { AddBusMasterDetailsDefault, AddBusRateDefaults, AddDefaultValuesForCars, AddDefaultValuesForCarsRate, AddImagesForCarouselPg, AddUrbaniaDefaults, AddUrbaniaDetails, clearAllVehicleRates } from '@/actions/defaultPg';
+import {
+  addDefaultValuesForPlaces,
+  addSightSeeingDefaults,
+  saveVehicleRatesCar,
+} from '@/actions/places';
 import getAllTravelerInsideImages, {
   getRateTableForId,
   getTravelerCarouselImages,
@@ -19,23 +21,21 @@ import getAllTravelerInsideImages, {
 import { Button, Container, Stack } from '@mantine/core';
 
 export default async function Defaultpage() {
-  await AddImagesForCarousel();
-  await AddBusDetails();
+  await clearAllVehicleRates()
+  await AddImagesForCarouselPg();
+  await AddBusMasterDetailsDefault()
+  await AddBusRateDefaults();
   await AddDefaultValuesForTravellerRate();
   await AddDefaultValuesForTraveller();
   await AddDefaultValuesForCars();
   await AddDefaultValuesForCarsRate();
-
+  await addDefaultValuesForPlaces();
   await AddUrbaniaDetails();
   await AddUrbaniaDefaults();
-  await DefaultReviews();
 
-  await AddBusDefaults();
+ 
 
- ;
-
-
-  console.log('tempo carousel  ', await getTravelerCarouselImages());
+  
 
   return (
     <Container my="md">

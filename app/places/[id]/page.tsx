@@ -18,7 +18,7 @@ export default async function Page({ params }: any) {
 }
 
 export async function generateStaticParams() {
-  const posts = ['kochi', 'kovalam', 'munnar', 'vagamon', 'thekkady', 'kanyakumari', 'kollam'];
+  const posts = ['kochi', 'kovalam', 'munnar', 'vagamon', 'thekkady', 'kanyakumari', 'kollam', 'alappuzha'];
 
   return posts.map((post) => ({
     id: post,
