@@ -6,17 +6,17 @@ import classes from './TaxiCarousel.module.css';
 
 const data = [
   {
-    image: 'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/crysta_6',
+    image: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/mzfpypbsgml2ysv64hxl',
     title: 'Best forests to visit in Munnar',
     category: 'nature',
   },
   {
-    image: 'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/inside_2',
+    image: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/gtmxloywvtvimdp7xshv',
     title: 'Clean and Modern: better than you think',
     category: 'interior',
   },
   {
-    image: 'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/hotel_1',
+    image: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/lr5kzcjyedxydr0kotri',
     title: 'Mountains at night: 12 best locations to enjoy the view',
     category: 'nature',
   },
@@ -42,7 +42,7 @@ const data = [
     category: 'nature',
   },
   {
-    image: 'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/group_1',
+    image: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/aicxeq3ok8b2qhenl2qe',
     title: 'Active volcanos reviews: travel at your own risk',
     category: 'nature',
   },

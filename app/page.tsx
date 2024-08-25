@@ -15,7 +15,7 @@ const taxiData = [
   {
     id: 1,
     name: 'KOCHI AIRPORT TAXI',
-    image: 'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/group_1',
+    image: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Stylsed/yznwtp50tjtjlyeiejgi',
     link: '/taxi',
   },
   {
@@ -27,7 +27,7 @@ const taxiData = [
   {
     id: 3,
     name: 'KERALA TAXI PACAKGES',
-    image: 'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/1',
+    image: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/mzfpypbsgml2ysv64hxl',
     link: '/package',
   },
   {
