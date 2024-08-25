@@ -20,6 +20,7 @@ export const publicRoutes = [
   '/auth/new-verification',
   '/init',
   '/places',
+  '/api/public',
 ];
 
 /**

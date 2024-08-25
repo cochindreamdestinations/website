@@ -12,16 +12,16 @@ export default async function Pricing() {
   const results = await getAllTravelerInsideImages();
 
   const imagesList = await getTravelerCarouselImages();
-  console.log('results list list', results);
+  console.log('results list list', imagesList);
   const components = results?.map((item: Traveller) => (
-    <div key={item.id} id={item.id}>
+    <div key={item.id} id={item.vehicle_type}>
       <ServerCarousel
         title={item.description}
-        data={imagesList.filter((i: any) => i.id === item.id)[0]?.list}
+        data={imagesList.filter((i: any) => i.vehicle_type === item.vehicle_type)[0]?.list}
       />
       <RateTableComponent
         key={item.id}
-        id={item.id}
+        id={item.vehicle_type}
         extra_km={item.extra_per_km}
         description={item.description}
       />

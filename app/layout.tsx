@@ -25,7 +25,7 @@ export default async function RootLayout({ children }: { children: any }) {
         <head>
           <ColorSchemeScript />
           <link rel="shortcut icon" href="/favicon.svg" />
-          <link rel="preload" href="/cars.webp" as="image" />
+          <link rel="preload" href="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/movn7u4wkdnpm3tivrk3" as="image" />
           <meta
             name="viewport"
             content="minimum-scale=1, maximum-scale=2, initial-scale=1, width=device-width, user-scalable=no"

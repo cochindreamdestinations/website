@@ -67,7 +67,7 @@ export function FooterLinks() {
       <Container className={classes.inner}>
         <div className={classes.logo}>
           <Image
-            src="/logo.webp"
+            src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r"
             width={120}
             height={120}
             about="Cochin Dream Destinations Logo"
@@ -113,7 +113,7 @@ export function FooterLinks() {
             variant="subtle"
             aria-label="Instagram"
             component={Link}
-            href="https://www.youtube.com/channel/UCq8LnG9DHyyHnCJtLFAQUcg"
+            href="https://www.instagram.com/cochindreamdestinations"
             target="_blank"
           >
             <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />

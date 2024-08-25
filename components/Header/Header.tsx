@@ -43,7 +43,7 @@ export function HeaderSearch() {
             hiddenFrom="sm"
             aria-label="Open Menu"
           />
-          <Image src="/logo.webp" height={60} width={60} alt="Image background" />
+          <Image src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" height={60} width={60} alt="Image background" />
           <Drawer opened={opened} onClose={close} title="Menu">
             <List spacing="xs" size="sm" center>
               {items.map((i, index) => (

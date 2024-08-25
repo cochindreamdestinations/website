@@ -1,107 +1,98 @@
 import { db } from '@/lib/db';
 import { kv } from '@vercel/kv';
 
-export async function AddDefaultValuesForTraveller() {
+export async function AddDefaultValuesForTravellerPg() {
   const data = [
     {
-      id: 'traveller_ultra_luxury_08',
+      vehicle_type: 'traveller_ultra_luxury_08',
       name: 'Luxury Tempo Traveller - 8 seater',
       description: '08 SEATER ULTRA LUXURY TEMPO TRAVELLER',
       pax: 8,
       extra_per_km: 24,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/t22vgay1faiaukcccdet',
+      
     },
     {
-      id: 'traveller_ultra_luxury_10',
+      vehicle_type: 'traveller_ultra_luxury_10',
       name: 'Luxury Tempo Traveller - 10 seater',
       description: '10 SEATER ULTRA LUXURY TEMPO TRAVELLER',
       pax: 10,
       extra_per_km: 28,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/t22vgay1faiaukcccdet',
+      
     },
     {
-      id: 'traveller_premium_10',
+      vehicle_type: 'traveller_premium_10',
       name: 'Premium Tempo Traveller - 10 seater',
       description: '10 SEATER PREMIUM TEMPO TRAVELLER',
       pax: 10,
       extra_per_km: 23,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/t22vgay1faiaukcccdet',
+      
     },
     {
-      id: 'traveller_premium_12',
+      vehicle_type: 'traveller_premium_12',
       name: 'Premium Tempo Traveller - 12 seater',
       description: '12 SEATER PREMIUM TEMPO TRAVELLER',
       pax: 12,
       extra_per_km: 23,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/rl0nrjntr5upeclncfjh',
+      
     },
     {
-      id: 'traveller_executive_12',
+      vehicle_type: 'traveller_executive_12',
       name: 'Executive Tempo Traveller - 10-12 seater',
       description: '10-12 SEATER EXECUTIVE TEMPO TRAVELLER',
       extra_per_km: 23,
       pax: 12,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/rmup4b6wvkg3rh1iepwu',
+      
     },
     {
-      id: 'traveller_premium_17',
+      vehicle_type: 'traveller_premium_17',
       name: 'Premium Tempo Traveller - 17 seater',
       pax: 17,
       description: '17 SEATER PREMIUM TEMPO TRAVELLER',
       extra_per_km: 25,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/s1bx3ed4grfujssv0xt6',
+      
     },
     {
-      id: 'traveller_executive_17',
+      vehicle_type: 'traveller_executive_17',
       name: 'Executive Tempo Traveller - 17 seater',
       extra_per_km: 25,
       pax: 17,
       description: '17 SEATER EXECUTIVE TEMPO TRAVELLER',
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/hyuiiiw4zccol9jatwhj',
+      
     },
     {
-      id: 'traveller_premium_20',
+      vehicle_type: 'traveller_premium_20',
       name: 'Premium Tempo Traveller - 20 seater',
       pax: 20,
       description: '20 SEATER PREMIUM TEMPO TRAVELLER',
       extra_per_km: 28,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/s1bx3ed4grfujssv0xt6',
+      
     },
     {
-      id: 'traveller_executive_20',
+      vehicle_type: 'traveller_executive_20',
       name: 'Executive Tempo Traveller - 20 seater',
       pax: 20,
       description: '20 SEATER EXECUTIVE TEMPO TRAVELLER',
       extra_per_km: 28,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/s1bx3ed4grfujssv0xt6',
+      
     },
     {
-      id: 'traveller_premium_26',
+      vehicle_type: 'traveller_premium_26',
       name: 'Premium Tempo Traveller - 26 seater',
+      pax: 26,
       description: '26 SEATER PREMIUM TEMPO TRAVELLER',
       extra_per_km: 28,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/zmboxeuuxb9sx2lvhnb0',
+      
     },
     {
-      id: 'traveller_executive_26',
+      vehicle_type: 'traveller_executive_26',
       name: 'Executive Tempo Traveller - 26 seater',
+      pax: 20,
       description: '26 SEATER EXECUTIVE TEMPO TRAVELLER',
       extra_per_km: 28,
-      image:
-        'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/zmboxeuuxb9sx2lvhnb0',
+      
     },
   ];
-  await kv.set('traveller', data);
+  await db.vehiclesMaster.createMany({ data });
 }
 
 export async function AddDefaultValuesForCars() {
@@ -634,66 +625,66 @@ export async function clearAllVehicleRates (){
   await db.vehicleRates.deleteMany()
 }
 
-export async function AddDefaultValuesForTravellerRate() {
+export async function AddDefaultValuesForTravellerRatePg() {
   const ultraLuxury8seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 8400,
       bata: 1600,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 12600,
       bata: 2400,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 16800,
       bata: 3200,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 21000,
       bata: 4000,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 25200,
       bata: 4800,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 29400,
       bata: 5600,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 33600,
       bata: 6400,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 37800,
       bata: 7200,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_ultra_luxury_08',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 42000,
@@ -702,63 +693,63 @@ export async function AddDefaultValuesForTravellerRate() {
   ];
   const ultraLuxury10seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 9400,
       bata: 1600,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 14100,
       bata: 2400,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 18800,
       bata: 3200,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 23500,
       bata: 4000,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 28200,
       bata: 4800,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 32900,
       bata: 5600,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 37600,
       bata: 6400,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 42300,
       bata: 7200,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_ultra_luxury_10',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 47000,
@@ -767,63 +758,63 @@ export async function AddDefaultValuesForTravellerRate() {
   ];
   const premium10seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 7600,
       bata: 1400,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 11400,
       bata: 2100,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 15200,
       bata: 2800,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 19000,
       bata: 3500,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 22800,
       bata: 4200,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 26600,
       bata: 4900,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 30400,
       bata: 5600,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 34200,
       bata: 6300,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_premium_10',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 38000,
@@ -833,63 +824,63 @@ export async function AddDefaultValuesForTravellerRate() {
 
   const premium12seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 8000,
       bata: 1400,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 12000,
       bata: 2100,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 16000,
       bata: 2800,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 20000,
       bata: 3500,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 24000,
       bata: 4200,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 28000,
       bata: 4900,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 32000,
       bata: 5600,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 36000,
       bata: 6300,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_premium_12',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 40000,
@@ -898,63 +889,63 @@ export async function AddDefaultValuesForTravellerRate() {
   ];
   const premium17seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 7400,
       bata: 1600,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 11100,
       bata: 2400,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 14800,
       bata: 3200,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 18500,
       bata: 4000,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 22200,
       bata: 4800,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 25900,
       bata: 5600,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 29600,
       bata: 6400,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 33300,
       bata: 7200,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_premium_17',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 37000,
@@ -964,63 +955,63 @@ export async function AddDefaultValuesForTravellerRate() {
 
   const premium20seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 10400,
       bata: 2000,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 15600,
       bata: 3000,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 20800,
       bata: 4000,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 26000,
       bata: 5000,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 31200,
       bata: 6000,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 36400,
       bata: 7000,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 41600,
       bata: 8000,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 46800,
       bata: 9000,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_premium_20',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 52000,
@@ -1030,63 +1021,63 @@ export async function AddDefaultValuesForTravellerRate() {
 
   const premium26seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 13000,
       bata: 2000,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 19500,
       bata: 3000,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 26000,
       bata: 4000,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 32500,
       bata: 5000,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 39000,
       bata: 6000,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 45500,
       bata: 7000,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 52000,
       bata: 8000,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 58500,
       bata: 9000,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_premium_26',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 65000,
@@ -1095,63 +1086,63 @@ export async function AddDefaultValuesForTravellerRate() {
   ];
   const executive12Seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 6600,
       bata: 1400,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 9900,
       bata: 2100,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 13200,
       bata: 2800,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 16500,
       bata: 3500,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 19800,
       bata: 4200,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 23100,
       bata: 4900,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 26400,
       bata: 5600,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 29700,
       bata: 6300,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_executive_12',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 33000,
@@ -1161,63 +1152,63 @@ export async function AddDefaultValuesForTravellerRate() {
 
   const executive20Seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 9000,
       bata: 2000,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 13500,
       bata: 3000,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 18000,
       bata: 4000,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 22500,
       bata: 5000,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 27000,
       bata: 6000,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 31500,
       bata: 7000,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 36000,
       bata: 8000,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 40500,
       bata: 9000,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_executive_20',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 45000,
@@ -1226,63 +1217,63 @@ export async function AddDefaultValuesForTravellerRate() {
   ];
   const executive26Seat = [
     {
-      id: 1,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '1 night - 2 days',
       max_km: 160,
       ac_rate: 11000,
       bata: 2000,
     },
     {
-      id: 2,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '2 nights - 3 days',
       max_km: 300,
       ac_rate: 16500,
       bata: 3000,
     },
     {
-      id: 3,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '3 nights - 4 days',
       max_km: 400,
       ac_rate: 22000,
       bata: 4000,
     },
     {
-      id: 4,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '4 nights - 5 days',
       max_km: 500,
       ac_rate: 27500,
       bata: 5000,
     },
     {
-      id: 5,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '5 nights - 6 days',
       max_km: 600,
       ac_rate: 33000,
       bata: 6000,
     },
     {
-      id: 6,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '6 nights - 7 days',
       max_km: 700,
       ac_rate: 38500,
       bata: 7000,
     },
     {
-      id: 7,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '7 nights - 8 days',
       max_km: 800,
       ac_rate: 44000,
       bata: 8000,
     },
     {
-      id: 8,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '8 nights - 9 days',
       max_km: 900,
       ac_rate: 49500,
       bata: 9000,
     },
     {
-      id: 9,
+      vehicle_id: 'traveller_executive_26',
       number_of_days: '9 nights - 10 days',
       max_km: 1000,
       ac_rate: 55000,
@@ -1290,17 +1281,18 @@ export async function AddDefaultValuesForTravellerRate() {
     },
   ];
 
-  await kv.set('traveller_ultra_luxury_08', ultraLuxury8seat);
-  await kv.set('traveller_ultra_luxury_10', ultraLuxury10seat);
-  await kv.set('traveller_premium_10', premium10seat);
-  await kv.set('traveller_premium_12', premium12seat);
-  await kv.set('traveller_premium_17', premium17seat);
-  await kv.set('traveller_premium_20', premium20seat);
-  await kv.set('traveller_premium_26', premium26seat);
-
-  await kv.set('traveller_executive_12', executive12Seat);
-  await kv.set('traveller_executive_20', executive20Seat);
-  await kv.set('traveller_executive_26', executive26Seat);
+   
+  await db.vehicleRates.createMany({data:ultraLuxury8seat})
+  await db.vehicleRates.createMany({data:ultraLuxury10seat})
+  await db.vehicleRates.createMany({data:premium10seat})
+  await db.vehicleRates.createMany({data:premium12seat})
+  await db.vehicleRates.createMany({data:premium17seat})
+  await db.vehicleRates.createMany({data:premium20seat})
+  await db.vehicleRates.createMany({data:premium26seat})
+  await db.vehicleRates.createMany({data:executive12Seat})
+  await db.vehicleRates.createMany({data:executive20Seat})
+  await db.vehicleRates.createMany({data:executive26Seat})
+ 
 }
 
 export async function AddUrbaniaDetails() {
@@ -1916,6 +1908,19 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
+      vehicle_type: 'innova',
+      title: 'TOYOTA INNOVA',
+      list: [
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/aicxeq3ok8b2qhenl2qe',
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/lr5kzcjyedxydr0kotri',
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/okkuf2vdpohi965n2a62',
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Hycross/vthizg9cjic9pdis6wcm',
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Hycross/c3zysorzw7la3tsitubc',
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Hycross/yi2a53obetz6m9bkxr5l',
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Hycross/bkytaat8y261e3gue3no'
+      ],
+    },
+    {
       vehicle_type: 'hycross',
       title: 'TOYOTA HYCROSS',
       list: [
@@ -1943,9 +1948,9 @@ export async function AddImagesForCarouselPg() {
    
    
   ];
-  const data = [
+  const travellerdata = [
     {
-      id: 'traveller_ultra_luxury_08',
+      vehicle_type: 'traveller_ultra_luxury_08',
       title: 'ULTRA LUXURY TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/glwbzppvwrqlmlfs7hnm',
@@ -1959,7 +1964,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_ultra_luxury_10',
+      vehicle_type: 'traveller_ultra_luxury_10',
       title: '10 SEATER LUXURY TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/traveller_2',
@@ -1972,7 +1977,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_premium_10',
+      vehicle_type: 'traveller_premium_10',
       title: '10 SEATER PREMIUM TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/ivygitotxycfzxibrivd',
@@ -1987,7 +1992,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_premium_12',
+      vehicle_type: 'traveller_premium_12',
       title: '10-12 SEATER EXECUTIVE TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/jgbaw4yifjdd2vpvx7uk',
@@ -2001,7 +2006,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_premium_17',
+      vehicle_type: 'traveller_premium_17',
       title: '17 SEATER PREMIUM TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/traveller_2',
@@ -2014,7 +2019,8 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_premium_20',
+      vehicle_type: 'traveller_premium_20',
+      title:'TRAVELLER PREMIUM 20 SEATER',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/traveller_5',
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/euf1asoo8ozsxg1prz42',
@@ -2026,7 +2032,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_premium_26',
+      vehicle_type: 'traveller_premium_26',
       title: '26 SEATER PREMIUM TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/hyuiiiw4zccol9jatwhj',
@@ -2038,7 +2044,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_executive_12',
+      vehicle_type: 'traveller_executive_12',
       title: '12 SEATER EXECUTIVE TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/traveller_2',
@@ -2050,7 +2056,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_executive_17',
+      vehicle_type: 'traveller_executive_17',
       title: '17 SEATER EXECUTIVE TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/traveller_2',
@@ -2062,7 +2068,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_executive_20',
+      vehicle_type: 'traveller_executive_20',
       title: '20 SEATER EXECUTIVE TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/traveller/rmup4b6wvkg3rh1iepwu',
@@ -2074,7 +2080,7 @@ export async function AddImagesForCarouselPg() {
       ],
     },
     {
-      id: 'traveller_executive_26',
+      vehicle_type: 'traveller_executive_26',
       title: '26 SEATER EXECUTIVE TEMPO TRAVELLER IMAGES',
       list: [
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/traveller_2',
@@ -2185,6 +2191,7 @@ export async function AddImagesForCarouselPg() {
   await db.carouselImages.createMany({data: carData})
   await db.carouselImages.createMany({ data: urbania });
   await db.carouselImages.createMany({data:busData})
+  await db.carouselImages.createMany({data:travellerdata})
 }
 
 export const DefaultReviews = async () => {

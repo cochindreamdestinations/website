@@ -7,8 +7,10 @@ import RateTableCar from '@/components/RateTable/RateTableCar';
 import Image from 'next/image';
 
 export default async function Pricing() {
-  const results = await getAllCars();
-  const imagesList = await getCarCarouselImages();
+  const res = await fetch('https://cochindreamdestinations.vercel.app/api/public/packages', {method:'GET'})
+  const results = await res.json();
+  const imgres = await fetch('https://cochindreamdestinations.vercel.app/api/public/packages/carousel', {method:'GET'})
+  const imagesList = await imgres.json();
   const isImagesExistForId = (id: string) => {
     return imagesList.filter((i: any) => i.vehicle_type === id)[0]?.list?.length > 0;
   };
