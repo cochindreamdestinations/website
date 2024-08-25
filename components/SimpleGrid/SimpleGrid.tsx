@@ -11,9 +11,9 @@ import {
 } from '@mantine/core';
 
 const imageList = [
-  'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/inside_1',
-  'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/1',
-  'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/traveller_1',
+  'https://res.cloudinary.com/dtgoc3cww/image/upload/v1724505121/Innova/gtmxloywvtvimdp7xshv.jpg',
+  'https://res.cloudinary.com/dtgoc3cww/image/upload/v1724505199/Stylsed/mok1xqjf175wwki8069e.jpg',
+  'https://res.cloudinary.com/dtgoc3cww/image/upload/v1724505120/Innova/h8jnkvgzgl5hg3weknm4.jpg',
   'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/2',
   'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/traveller_2',
   'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/crysta_9',
