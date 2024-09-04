@@ -50,7 +50,7 @@ export default async function HomePage() {
   const reviewsadd = await DefaultReviews();
   const reviews = await getReviews();
 
-  console.log('reviews ', reviews);
+  
   return (
     <>
       <HeroImageBackground />
