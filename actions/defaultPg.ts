@@ -618,6 +618,7 @@ export async function AddDefaultValuesForCarsRate() {
   await db.vehicleRates.createMany({ data: ertigaRate });
   await db.vehicleRates.createMany({ data: etiosRate });
   await db.vehicleRates.createMany({ data: innovaRate });
+  console.log("created data for vehicles car")
 }
 
 export async function clearAllVehicleRates (){

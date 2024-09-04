@@ -8,6 +8,7 @@ import { db } from '@/lib/db';
  */
 export async function getAllCars(id?: string) {
   'use server';
+  
   const result: any = await db.vehiclesMaster.findMany({
     where: {
       OR: [

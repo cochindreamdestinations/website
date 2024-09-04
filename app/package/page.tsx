@@ -14,6 +14,7 @@ export default async function Pricing() {
   const isImagesExistForId = (id: string) => {
     return imagesList.filter((i: any) => i.vehicle_type === id)[0]?.list?.length > 0;
   };
+  console.log("car data")
   const components = results?.map((item: TravellerWithData) => (
     <div key={item.id} id={item.vehicle_type}>
       {isImagesExistForId(item.vehicle_type) && (
