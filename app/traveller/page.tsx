@@ -12,9 +12,9 @@ import TempoTravellerHeading from '@/components/TempTravellerHeading/TempoTravel
 
 export default async function Pricing() {
 
-  const res = await fetch('http://localhost:3000/api/public/traveller', {method:'GET'})
+  const res = await fetch('https://cochindreamdestinations.vercel.app/api/public/traveller', {method:'GET'})
   const results = await res.json();
-  const imgres = await fetch('http://localhost:3000/api/public/traveller/carousel', {method:'GET'})
+  const imgres = await fetch('https://cochindreamdestinations.vercel.app/api/public/traveller/carousel', {method:'GET'})
   const imagesList = await imgres.json();
   
   const components = results?.map((item: TravellerWithData) => (
