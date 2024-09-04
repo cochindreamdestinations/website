@@ -1,9 +1,10 @@
-import { getAllCars, getRateTableForId } from '@/actions/cars';
+import {  getRateTableForId } from '@/actions/cars';
+import getAllTravelerInsideImages from '@/actions/traveller';
 
 
 export const GET = async (request: Request) => {
   
-  const result = await getAllCars();
+  const result = await getAllTravelerInsideImages();
   let finalResult = [];
   for (let i of result) {
     let data = await getRateTableForId(i.id);

@@ -1,10 +1,10 @@
-import { getAllCars, getCarCarouselImages } from '@/actions/cars';
-import { Traveller } from '@/actions/traveller';
+import {  TravellerWithData } from '@/actions/traveller';
 import ServerCarousel from '@/components/Carousel/ServerCarousel';
 import CallUsNowButtons from '@/components/GetInTouch/CallUsNowButton';
-import RateTableCar from '@/components/RateTable/RateTableCar';
 
-import Image from 'next/image';
+import RateTablePredata from '@/components/RateTable/RateTablePreData';
+
+
 
 export default async function Pricing() {
   const res = await fetch('https://cochindreamdestinations.vercel.app/api/public/packages', {method:'GET'})
@@ -14,7 +14,7 @@ export default async function Pricing() {
   const isImagesExistForId = (id: string) => {
     return imagesList.filter((i: any) => i.vehicle_type === id)[0]?.list?.length > 0;
   };
-  const components = results?.map((item: Traveller) => (
+  const components = results?.map((item: TravellerWithData) => (
     <div key={item.id} id={item.vehicle_type}>
       {isImagesExistForId(item.vehicle_type) && (
         <ServerCarousel
@@ -22,9 +22,9 @@ export default async function Pricing() {
           data={imagesList.filter((i: any) => i.vehicle_type === item.vehicle_type)[0]?.list}
         />
       )}
-      <RateTableCar
+      <RateTablePredata
         key={item.id}
-        id={item.vehicle_type}
+        data={item.data}
         extra_km={item.extra_per_km}
         description={item.description}
       />

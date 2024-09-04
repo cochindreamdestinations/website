@@ -1,5 +1,5 @@
-import getAllBusTypes, { getBusCarouselImages } from '@/actions/bus';
-import { Urbania } from '@/actions/urbania';
+
+import { TravellerWithData } from '@/actions/traveller';
 import ServerCarousel from '@/components/Carousel/ServerCarousel';
 import CallUsNowButtons from '@/components/GetInTouch/CallUsNowButton';
 import RateTableComponent from '@/components/RateTable/RateTable';
@@ -7,9 +7,11 @@ import RateTableComponent from '@/components/RateTable/RateTable';
 import BusHead from '@/components/bus/BusHead';
 
 export default async function BusPage() {
-  const results = await getAllBusTypes();
-  const imagesList = await getBusCarouselImages();
-  const components = results?.map((item: Urbania) => (
+  const res = await fetch('http://localhost:3000/api/public/bus', {method:'GET'})
+  const results = await res.json();
+  const imgres = await fetch('http://localhost:3000/api/public/bus/carousel', {method:'GET'})
+  const imagesList = await imgres.json();
+  const components = results?.map((item: TravellerWithData) => (
     <div key={item.id} id={item.vehicle_type}>
       <ServerCarousel
         title={item.description}
@@ -17,7 +19,7 @@ export default async function BusPage() {
       />
       <RateTableComponent
         key={item.id}
-        id={item.vehicle_type}
+        data={item.data}
         extra_km={item.extra_per_km}
         description={item.description}
       />

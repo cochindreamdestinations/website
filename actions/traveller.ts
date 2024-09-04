@@ -11,6 +11,17 @@ export interface Traveller {
   
 }
 
+export interface TravellerWithData {
+  id:string;
+  vehicle_type: string;
+  name: string;
+  extra_per_km: number;
+  description: string;
+  pax: number;
+  data:any;
+  
+}
+
 export interface RateList {
   id: number;
   number_of_days: string;
@@ -20,6 +31,15 @@ export interface RateList {
   bata: number;
 }
 
+export interface RateListWithData {
+  id: number;
+  number_of_days: string;
+  data: any;
+  vehicle_id?: string;
+  max_km: number;
+  ac_rate: number;
+  bata: number;
+}
 export default async function getAllTravelerInsideImages(id?: string) {
   'use server';
   const result: any = await db.vehiclesMaster.findMany({

@@ -1,9 +1,9 @@
 'use client';
-import { RateList } from '@/actions/traveller';
+import { RateList, RateListWithData } from '@/actions/traveller';
 import { Center, Container, Table, Title } from '@mantine/core';
 
 interface TableListProps {
-  data?: RateList[] | null;
+  data?: RateList[] | RateListWithData[] | null;
   description: string;
 }
 
