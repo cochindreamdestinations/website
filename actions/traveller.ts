@@ -49,7 +49,7 @@ export default async function getAllTravelerInsideImages(id?: string) {
       },
     },
   });
-  return id ? result?.filter((i: any) => i.id === id) : result;
+  return id ? result?.filter((i: any) => i.vehicle_type === id) : result;
 }
 /**
  * Get rate table for id

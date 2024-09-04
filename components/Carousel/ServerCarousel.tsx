@@ -6,7 +6,7 @@ import classes from './TaxiCarousel.module.css';
 import { quicksand } from '@/app/font';
 
 export default function ServerCarousel({ data, title, size }: any) {
-  console.log("vehicle types", data)
+  
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   const slides = data?.map((item: string) => (

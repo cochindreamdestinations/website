@@ -12,15 +12,16 @@ export default async function Defaultpage() {
   await clearAllVehicleRates()
   await AddImagesForCarouselPg();
   await AddBusMasterDetailsDefault()
-  await AddBusRateDefaults();
   
+  await AddUrbaniaDetails();
  
   await AddDefaultValuesForTravellerPg();
   await AddDefaultValuesForTravellerRatePg();
   await AddDefaultValuesForCars();
   await AddDefaultValuesForCarsRate();
+  await AddBusRateDefaults();
   await addDefaultValuesForPlaces();
-  await AddUrbaniaDetails();
+  
   await AddUrbaniaDefaults();
 
  

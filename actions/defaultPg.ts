@@ -1312,16 +1312,7 @@ export async function AddUrbaniaDetails() {
       extra_per_km: 30,
     },
   ];
-  await db.vehiclesMaster.deleteMany({
-    where: {
-      OR: [
-        {
-          vehicle_type: 'urbania_15_luxury',
-        },
-        { vehicle_type: 'urbania_15_premium' },
-      ],
-    },
-  });
+  
   await db.vehiclesMaster.createMany({ data });
 }
 
@@ -1841,16 +1832,8 @@ export async function AddUrbaniaDefaults() {
       bata: 10000,
     },
   ];
-  await db.vehicleRates.deleteMany({
-    where: {
-      OR: [
-        {
-          vehicle_id: 'urbania_15_luxury',
-        },
-        { vehicle_id: 'urbania_15_premium' },
-      ],
-    },
-  });
+
+  
   await db.vehicleRates.createMany({ data: urbania15Premium });
   await db.vehicleRates.createMany({ data: urbania15Seat });
 }

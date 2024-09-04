@@ -1,4 +1,4 @@
-import { getRateTableForId } from '@/actions/cars';
+
 
 import NoteCard from './NoteCard';
 import TableList from './TableList';
