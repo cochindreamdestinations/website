@@ -3,10 +3,12 @@ import { Skeleton } from '@mantine/core';
 export default function LoadingSkleton() {
   return (
     <>
-      <Skeleton height={10} radius="xl" />
-      <Skeleton height={10} radius="xl" />
-      <Skeleton height={10} radius="xl" />
-      <Skeleton height={10} radius="xl" />
+      <Skeleton height={40} radius="xl" />
+      <br/>
+      <Skeleton height={40} radius="xl" />
+      <br/>
+      <Skeleton height={40} radius="xl" />
+      <Skeleton height={40} radius="xl" />
     </>
   );
 }
