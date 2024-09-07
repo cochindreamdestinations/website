@@ -47,7 +47,7 @@ const taxiData = [
 ];
 
 export default async function HomePage() {
-  const reviewsadd = await DefaultReviews();
+  
   const reviews = await getReviews();
 
   
@@ -65,11 +65,14 @@ export default async function HomePage() {
       <ServerCarousel
         title="Happy Customers"
         data={[
-          'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/cars/enqyhgentwj1etwxehcn',
-          'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/customers/nyn0vpxuc6hbp1lxkddz',
-          'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/customers/bzjitcbhc2krzbkvvvld',
-          'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/customers/k5n0ptylg7meebzfenpq',
-          'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/customers/lewkwqqfsw9pdkju8bnb',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145437_icw8pt',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145464_w7swyz',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145456_synj03',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145449_lapc0l',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145459_b6ofr5',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145431_md6kgc',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145443_sreyh5',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145440_ma1g5f'
         ]}
       />
     </>

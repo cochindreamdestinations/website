@@ -12,10 +12,10 @@ export default function CallUsNowButtons() {
             component={Link}
             variant="filled"
             color="green"
-            href="tel:+918547992024"
+            href="tel:+918281611024"
             target="_blank"
           >
-            CALL US +918547992024
+            CALL US +918281611024
           </Button>
           <Button
             component={Link}

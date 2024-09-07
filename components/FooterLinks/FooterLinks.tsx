@@ -81,7 +81,7 @@ export function FooterLinks() {
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2024 cochindreamdestinations.com All rights reserved.
+          © 2024 cochindreamdestinations.in All rights reserved.
         </Text>
 
         <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
@@ -102,7 +102,7 @@ export function FooterLinks() {
             variant="subtle"
             aria-label="Youtube"
             component={Link}
-            href="https://www.youtube.com/channel/UCq8LnG9DHyyHnCJtLFAQUcg"
+            href="https://www.youtube.com/@ReelsOnwheels-he4vf"
             target="_blank"
           >
             <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
@@ -125,7 +125,7 @@ export function FooterLinks() {
             variant="subtle"
             aria-label="Trip Advisor"
             component={Link}
-            href="https://www.tripadvisor.in/Profile/tripwagon"
+            href="https://www.tripadvisor.in/Profile/dreamdestinations"
             target="_blank"
           >
             <FaTripadvisor style={{ width: rem(18), height: rem(18) }} />
