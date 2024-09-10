@@ -10,6 +10,7 @@ import TestimonialCarousel from '@/components/Carousel/Testimonial';
 import { TaxiPackagesCarousel } from '@/components/Carousel/TaxiPackagesCarousel';
 import ServerCarousel from '@/components/Carousel/ServerCarousel';
 import { DefaultReviews } from '@/actions/defaultKv';
+import PhoneFAB from '@/components/FAB/PhoneButton';
 
 const taxiData = [
   {
@@ -55,6 +56,7 @@ export default async function HomePage() {
     <>
       <HeroImageBackground />
       <WhatsAppFAB />
+      <PhoneFAB />
 
       <FeaturesGrid />
       <TaxiPackagesCarousel data={taxiData} />
