@@ -8,6 +8,7 @@ export default function LoadingSkleton() {
       <Skeleton height={40} radius="xl" />
       <br/>
       <Skeleton height={40} radius="xl" />
+      <br/>
       <Skeleton height={40} radius="xl" />
     </>
   );
