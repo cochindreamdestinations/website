@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function PhoneFAB() {
   return (
-      <Affix position={{ bottom: 80, right: 40 }}>
+      <Affix position={{ bottom: 100, right: 40 }}>
             <ActionIcon
                     color="blue"
                             radius="xl"
