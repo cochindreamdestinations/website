@@ -29,8 +29,8 @@ const MOCKDATA = [
   { title: 'Email', description: 'cochindreamdestinations@gmail.com', icon: IconAt },
   { title: 'Phone', description: '+91 8547992024', icon: IconPhone },
   {title: 'Phone', description : '+91 8281611024', icon: IconPhone},
-  { title: 'Address', description: 'Kodungallur', icon: IconMapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
+  { title: 'Address', description: `Ambalamukku, Building No 323A, Pattanakkad, Kerala 688531`, icon: IconMapPin },
+  { title: 'Working hours', description: '24 x 7 available.', icon: IconSun },
 ];
 
 export function ContactIconsList() {
