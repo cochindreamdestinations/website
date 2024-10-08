@@ -8,8 +8,10 @@ import UrbaniaHead from '@/components/UrbaniaHead/UrbaniaHead';
 import UrbaniaImage from '@/components/UrbaniaHead/UrbaniaImage';
 
 export default async function UrbaniaPage() {
-  const results = await getAllUrbaniaTypes();
-  const imagesList = await getUrbaniaCarouselImages();
+  const res = await fetch("https://cochindreamdestinations.vercel.app/api/public/urbania",{method:"GET"});
+  const results = await res.json();
+  const imgli = await fetch("https://cochindreamdestinations.vercel.app/api/public/urbania/carousel", {method:'GET'});
+  const imagesList = await imgli.json();
   
   const components = results?.map((item: Urbania) => (
     <div key={item.id} id={item.id}>
