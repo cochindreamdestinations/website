@@ -1,10 +1,10 @@
 'use client';
-import { Text, Container, ActionIcon, Group, rem } from '@mantine/core';
+import { Text, Container, ActionIcon, Group, rem, Image } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import { FaTripadvisor } from 'react-icons/fa';
 
 import classes from './FooterLinks.module.css';
-import Image from 'next/image';
+
 import ListLinks from './ListLinks';
 import Link from 'next/link';
 
@@ -84,29 +84,30 @@ export function FooterLinks() {
           © 2024 cochindreamdestinations.in All rights reserved.
         </Text>
 
-        <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
+        <Group gap={3} className={classes.social} justify="flex-end" wrap="nowrap">
+          
           <ActionIcon
             size="lg"
             color="gray"
             variant="subtle"
             component={Link}
-            aria-label="Twitter"
+            aria-label="Youtube"
             href="https://www.youtube.com/channel/UCq8LnG9DHyyHnCJtLFAQUcg"
             target="_blank"
           >
-            <IconBrandTwitter style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            <Image fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/youtube" />
           </ActionIcon>
           <ActionIcon
             size="lg"
             color="gray"
             variant="subtle"
-            aria-label="Youtube"
+            aria-label="Facebook"
             component={Link}
             href="https://www.youtube.com/@ReelsOnwheels-he4vf"
             target="_blank"
           >
-            <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
+           <Image fit="contain" alt='Facebook' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/facebook" />
+           </ActionIcon>
           <ActionIcon
             size="lg"
             color="gray"
@@ -116,20 +117,20 @@ export function FooterLinks() {
             href="https://www.instagram.com/cochindreamdestinations"
             target="_blank"
           >
-            <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
+            <Image fit="contain" alt='Instagram' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/instagram" />
+            </ActionIcon>
 
           <ActionIcon
             size="lg"
-            color="gray"
+            
             variant="subtle"
             aria-label="Trip Advisor"
             component={Link}
             href="https://www.tripadvisor.in/Profile/dreamdestinations"
             target="_blank"
           >
-            <FaTripadvisor style={{ width: rem(18), height: rem(18) }} />
-          </ActionIcon>
+            <Image fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/tripadvisor" />
+            </ActionIcon>
         </Group>
       </Container>
       <Container>
