@@ -8,7 +8,7 @@ import ItenaryTable from '@/components/Tables/TariffTables/ItinaryTable';
 import { TariffTable } from '@/components/Tables/TariffTables/TarrifTableAll';
 
 export default async function Pricing() {
-  const imgres = await fetch('https://cochindreamdestinations.vercel.app/api/public/packages/rentals', {method:'GET'})
+  const imgres = await fetch('https://cochindreamdestinations.vercel.app/api/public/rentals', {method:'GET'})
   const result = await imgres.json();
   
   return (
