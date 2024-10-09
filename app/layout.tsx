@@ -45,7 +45,7 @@ export default async function RootLayout({ children }: { children: any }) {
             property="og:description"
             content="High Quality and Most Affordable tour cabs services in kerala"
           />
-          <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+          <meta property="og:image" content="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://cochindreamdestinations.in/" />
@@ -57,7 +57,7 @@ export default async function RootLayout({ children }: { children: any }) {
             property="twitter:description"
             content="High Quality and Most Affordable tour cabs services in kerala"
           />
-          <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+          <meta property="twitter:image" content="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" />
         </head>
         <body>
           <MantineProvider theme={theme}>

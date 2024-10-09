@@ -615,7 +615,7 @@ export default async function Pricing() {
           property="og:description"
           content="Various taxi packages curated according to client requirement. More than 10 years of experience in tourism sector with high number of satisfied clients"
         />
-        <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+        <meta property="og:image" content="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://cochindreamdestinations.in/package" />
@@ -627,7 +627,7 @@ export default async function Pricing() {
           property="twitter:description"
           content="Various taxi packages curated according to client requirement. More than 10 years of experience in tourism sector with high number of satisfied clients"
         />
-        <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+        <meta property="twitter:image" content="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" />
       </Head>
       {isImagesExistForId(item.vehicle_type) && (
         <ServerCarousel
