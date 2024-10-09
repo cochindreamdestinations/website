@@ -159,10 +159,27 @@ export function FooterLinks() {
               width={32}
               height={32}
               fit="contain"
-              alt="Youtube"
+              alt="Tripadvisor"
               src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/tripadvisor"
             />
           </ActionIcon>
+          <ActionIcon
+            size="lg"
+            variant="subtle"
+            aria-label="Pinterest"
+            component={Link}
+            href="https://in.pinterest.com/cdreamdestinations/"
+            target="_blank"
+          >
+            <MImage
+              width={32}
+              height={32}
+              fit="contain"
+              alt="Pinterest"
+              src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/fq3p33arpcoppsqfkneq"
+            />
+          </ActionIcon>
+          
         </Group>
       </Container>
       <Container>
