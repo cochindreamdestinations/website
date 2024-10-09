@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import LoadingSkleton from '@/components/LoadingSkleton/LoadingSkleton';
+import LoadingChunk from '@/components/LoadingSkleton/LoadingChunkSkleton';
 
 const TestimonialCarousel = dynamic(() => import('@/components/Carousel/Testimonial'));
 const ServerCarousel = dynamic(() => import('@/components/Carousel/ServerCarousel'));
@@ -23,7 +24,7 @@ const HeroImageBackground = dynamic(
   {
     ssr: false, // This option disables server-side rendering for this component
     loading: () => (
-      <img src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/b1zuzcfgsvu7fzkhinrl"/>
+      <img src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/b1zuzcfgsvu7fzkhinrl" />
     ), // Optional: A fallback component to show while loading
   }
 );
@@ -91,10 +92,10 @@ export default async function HomePage() {
       <Suspense fallback={<LoadingSkleton />}>
         <FeaturesGrid />
       </Suspense>
-      <Suspense fallback={<LoadingSkleton/>}>
-      <TaxiPackagesCarousel data={taxiData} />
+      <Suspense fallback={<LoadingChunk />}>
+        <TaxiPackagesCarousel data={taxiData} />
       </Suspense>
-      
+
       <Suspense fallback={<LoadingSkleton />}>
         <TestimonialCarousel data={reviews} title="Testimonials" />
       </Suspense>

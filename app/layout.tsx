@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
 import { HeaderSearch } from '@/components/Header/Header';
-import { FooterLinks } from '@/components/FooterLinks/FooterLinks';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { SessionProvider } from 'next-auth/react';
@@ -14,6 +13,30 @@ import Head from 'next/head';
 import { Viewport } from 'next';
 import LoadingSkleton from '@/components/LoadingSkleton/LoadingSkleton';
 const WhatsAppFAB = dynamic(() => import('@/components/FAB/WhatsAppButton'));
+
+const HeaderSearch = dynamic(
+  () => import('@/components/Header/Header').then((mod) => mod.HeaderSearch),
+  {
+    ssr: false, // This option disables server-side rendering for this component
+    loading: () => (
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ul>
+      </nav>
+    ), // Optional: A fallback component to show while loading
+  }
+);
+
+const FooterLinks = dynamic(
+  () => import('@/components/FooterLinks/FooterLinks').then((mod) => mod.FooterLinks),
+  {
+    ssr: false, // This option disables server-side rendering for this component
+    loading: () => <footer />, // Optional: A fallback component to show while loading
+  }
+);
 
 export const metadata = {
   title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
