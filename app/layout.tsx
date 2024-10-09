@@ -62,8 +62,8 @@ export const metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
   // Also supported by less commonly used
   // interactiveWidget: 'resizes-visual',
 };
