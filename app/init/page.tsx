@@ -23,6 +23,7 @@ export default async function Defaultpage() {
   await addDefaultValuesForPlaces();
   
   await AddUrbaniaDefaults();
+  await addSightSeeingDefaults();
 
  
 

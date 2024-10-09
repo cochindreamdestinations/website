@@ -4,7 +4,6 @@ import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
-import { HeaderSearch } from '@/components/Header/Header';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { SessionProvider } from 'next-auth/react';
