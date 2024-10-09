@@ -1,6 +1,6 @@
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
-import React from 'react';
+import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
@@ -12,17 +12,17 @@ import { SessionProvider } from 'next-auth/react';
 import { auth } from '@/auth';
 import Head from 'next/head';
 import { Viewport } from 'next';
-const WhatsAppFAB = dynamic(() => import('@/components/FAB/WhatsAppButton'))
-
+import LoadingSkleton from '@/components/LoadingSkleton/LoadingSkleton';
+const WhatsAppFAB = dynamic(() => import('@/components/FAB/WhatsAppButton'));
 
 export const metadata = {
   title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
   description: 'High Quality and Most Affordable tour cabs services kerala',
-  twitter:{
-    card:'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r',
+  twitter: {
+    card: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r',
     url: 'https://cochindreamdestinations.in',
     title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
-    description:'High Quality, Highly Trusted and Most Affordable tour cabs services kerala'
+    description: 'High Quality, Highly Trusted and Most Affordable tour cabs services kerala',
   },
   openGraph: {
     title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
@@ -59,7 +59,6 @@ export const metadata = {
   },
 };
 
-
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -67,7 +66,7 @@ export const viewport: Viewport = {
   userScalable: false,
   // Also supported by less commonly used
   // interactiveWidget: 'resizes-visual',
-}
+};
 
 export default async function RootLayout({ children }: { children: any }) {
   const session = await auth();
@@ -83,16 +82,30 @@ export default async function RootLayout({ children }: { children: any }) {
             href="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/movn7u4wkdnpm3tivrk3"
             as="image"
           />
-         
-
-          </Head>
+        </Head>
         <body>
           <MantineProvider theme={theme}>
             <SpeedInsights />
-            <HeaderSearch />
-            {children}
-            <WhatsAppFAB />
-            <FooterLinks />
+            <Suspense
+              fallback={
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="/">Home</a>
+                    </li>
+                  </ul>
+                </nav>
+              }
+            >
+              <HeaderSearch />
+            </Suspense>
+            <Suspense fallback={<LoadingSkleton />}>{children}</Suspense>
+            <Suspense fallback={<button>whatsapp</button>}>
+              <WhatsAppFAB />
+            </Suspense>
+            <Suspense fallback={<footer></footer>}>
+              <FooterLinks />
+            </Suspense>
           </MantineProvider>
           <Analytics />
         </body>
