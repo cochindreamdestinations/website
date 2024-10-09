@@ -1,15 +1,32 @@
 import dynamic from 'next/dynamic';
-import { HeroImageBackground } from '../components/hero/HeroComponent';
-import { FeaturesGrid } from '@/components/Features/FeaturesGrid';
 import { GetInTouch } from '@/components/GetInTouch/GetInTouch';
 import { getReviews } from '@/actions/bus';
 import { TaxiPackagesCarousel } from '@/components/Carousel/TaxiPackagesCarousel';
 import Head from 'next/head';
+import Link from 'next/link';
+import { Suspense } from 'react';
+import LoadingSkleton from '@/components/LoadingSkleton/LoadingSkleton';
 
 const TestimonialCarousel = dynamic(() => import('@/components/Carousel/Testimonial'));
 const ServerCarousel = dynamic(() => import('@/components/Carousel/ServerCarousel'));
 const WhatsAppFAB = dynamic(() => import('@/components/FAB/WhatsAppButton'));
 const PhoneFAB = dynamic(() => import('@/components/FAB/PhoneButton'));
+const FeaturesGrid = dynamic(
+  () => import('@/components/Features/FeaturesGrid').then((mod) => mod.FeaturesGrid),
+  {
+    ssr: false, // This option disables server-side rendering for this component
+    loading: () => <section>Loading...</section>, // Optional: A fallback component to show while loading
+  }
+);
+const HeroImageBackground = dynamic(
+  () => import('../components/hero/HeroComponent').then((mod) => mod.HeroImageBackground),
+  {
+    ssr: false, // This option disables server-side rendering for this component
+    loading: () => (
+      <img src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/b1zuzcfgsvu7fzkhinrl"/>
+    ), // Optional: A fallback component to show while loading
+  }
+);
 
 const taxiData = [
   {
@@ -54,19 +71,33 @@ export default async function HomePage() {
   return (
     <>
       <Head>
-        <link
+        <Link
           rel="preload"
-          href="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/movn7u4wkdnpm3tivrk3"
+          as="image"
+          type="image/webp"
+          href="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/b1zuzcfgsvu7fzkhinrl"
         />
       </Head>
-      <HeroImageBackground />
+      <Suspense
+        fallback={
+          <img src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/b1zuzcfgsvu7fzkhinrl" />
+        }
+      >
+        <HeroImageBackground />
+      </Suspense>
+
       <WhatsAppFAB />
       <PhoneFAB />
-
-      <FeaturesGrid />
+      <Suspense fallback={<LoadingSkleton />}>
+        <FeaturesGrid />
+      </Suspense>
+      <Suspense fallback={<LoadingSkleton/>}>
       <TaxiPackagesCarousel data={taxiData} />
-
-      <TestimonialCarousel data={reviews} title="Testimonials" />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingSkleton />}>
+        <TestimonialCarousel data={reviews} title="Testimonials" />
+      </Suspense>
 
       <GetInTouch />
 
