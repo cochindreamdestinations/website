@@ -1,15 +1,17 @@
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
 import { HeaderSearch } from '@/components/Header/Header';
 import { FooterLinks } from '@/components/FooterLinks/FooterLinks';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import WhatsAppFAB from '@/components/FAB/WhatsAppButton';
 import { SessionProvider } from 'next-auth/react';
 import { auth } from '@/auth';
+const WhatsAppFAB = dynamic(() => import('@/components/FAB/WhatsAppButton'))
+
 
 export const metadata = {
   title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',

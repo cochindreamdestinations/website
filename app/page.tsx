@@ -1,16 +1,14 @@
+import dynamic from 'next/dynamic';
 import { HeroImageBackground } from '../components/hero/HeroComponent';
 import { FeaturesGrid } from '@/components/Features/FeaturesGrid';
-import WhatsAppFAB from '@/components/FAB/WhatsAppButton';
 import { GetInTouch } from '@/components/GetInTouch/GetInTouch';
-import { Suspense } from 'react';
-import LoadingSkleton from '@/components/LoadingSkleton/LoadingSkleton';
-import { StatsGroup } from '@/components/StatusGroup/StatusGroup';
 import { getReviews } from '@/actions/bus';
-import TestimonialCarousel from '@/components/Carousel/Testimonial';
 import { TaxiPackagesCarousel } from '@/components/Carousel/TaxiPackagesCarousel';
-import ServerCarousel from '@/components/Carousel/ServerCarousel';
-import { DefaultReviews } from '@/actions/defaultKv';
-import PhoneFAB from '@/components/FAB/PhoneButton';
+
+const TestimonialCarousel = dynamic(()=>import('@/components/Carousel/Testimonial'))
+const ServerCarousel = dynamic(()=>import('@/components/Carousel/ServerCarousel'))
+const WhatsAppFAB = dynamic(() => import('@/components/FAB/WhatsAppButton'))
+const PhoneFAB = dynamic(() => import('@/components/FAB/PhoneButton'))
 
 const taxiData = [
   {

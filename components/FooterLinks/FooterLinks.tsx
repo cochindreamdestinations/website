@@ -66,7 +66,7 @@ export function FooterLinks() {
       <Container className={classes.inner}>
         <div className={classes.logo}>
           <Image
-            src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r"
+            src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/jcxqfemum1vr2gwyuhks"
             width={120}
             height={120}
             about="Cochin Dream Destinations Logo"
