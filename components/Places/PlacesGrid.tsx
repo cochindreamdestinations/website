@@ -40,6 +40,7 @@ interface PlacesGridProps {
 }
 
 export default function PlacesGrid({ data }: PlacesGridProps) {
+  console.log("places id is", data)
   return (
     <Grid>
       <Grid.Col span={12}>

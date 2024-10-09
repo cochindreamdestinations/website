@@ -624,7 +624,7 @@ export async function AddDefaultValuesForCarsRate() {
 export async function clearAllVehicleRates (){
   await db.vehiclesMaster.deleteMany()
   await db.vehicleRates.deleteMany()
-  await db.sightSeeingSpots.deleteMany({})
+  await db.sightSeeingSpots.deleteMany()
 }
 
 export async function AddDefaultValuesForTravellerRatePg() {
