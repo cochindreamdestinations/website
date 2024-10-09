@@ -4,7 +4,11 @@ import NoteCard from './NoteCard';
 import TableList from './TableList';
 
 export default async function RateTableComponent({ id, extra_km, description }: any) {
-  const data = await getRateTableForId(id);
+  console.log("id inside rate table is", id)
+  const urlval = new URL('https://cochindreamdestinations.vercel.app/api/public/rate')
+  urlval.searchParams.append("id", id)
+  const res = await fetch(urlval, {method:'GET'})
+  const data = await res.json();
   
   return (
     <>

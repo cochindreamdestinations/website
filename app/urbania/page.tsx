@@ -1,6 +1,5 @@
-import { Urbania, getUrbaniaCarouselImages } from '@/actions/urbania';
-import getAllUrbaniaTypes from '@/actions/urbania';
-import { CardsCarousel } from '@/components/Carousel/Carousel';
+import { Urbania } from '@/actions/urbania';
+
 import ServerCarousel from '@/components/Carousel/ServerCarousel';
 import CallUsNowButtons from '@/components/GetInTouch/CallUsNowButton';
 import RateTableComponent from '@/components/RateTable/RateTable';

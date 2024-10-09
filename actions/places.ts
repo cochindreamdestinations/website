@@ -88,6 +88,13 @@ export const addDefaultValuesForPlaces = async () => {
           'https://res.cloudinary.com/ds0bnfyym/image/upload/v1708797828/places/sightseeing/grkdoczhuhtexchjvgyb.webp',
         category: 'Backwaters',
       },
+      {
+        id: 'kumarakom',
+        place:'Kumarakom',
+        description:'Kumarakom is situated on the banks of Vembanadu Lake with mind blowing view of backwaters and canals where the traditional houseboats roam around. Kumarakom leads a good position in the development of Kerala tourism through there responsible tourism initiative program by tourism promotion counsel. Visitors can feel and enjoy the authentic living style of village people. The Kumarakom bird sanctuary have the rarest species of birds and provides the best ambience for migratory birds.',
+        category: 'Backwaters',
+        image:'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Stylsed/s94zhqstvgh0v7ablp62'
+      }
       
     ];
 
@@ -352,6 +359,42 @@ export const addSightSeeingDefaults = async () => {
       sight_name: 'THENMALA ECO TOURISM',
       sight_image:
         'https://res.cloudinary.com/ds0bnfyym/image/upload/f_auto,q_auto/v1/places/sightseeing/dcnwj0eowhcunkqtwbee',
+      carousel_images: [],
+      location: '',
+    },
+    {
+      id: 27,
+      place_id: 'kumarakom',
+      sight_name: 'BAY ISLAND DRIFTWOOD MUSEUM',
+      sight_image:
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/SIGHTSEEING/dsrelb2i2rw0cudlx0yq',
+      carousel_images: [],
+      location: '',
+    },
+    {
+      id: 28,
+      place_id: 'kumarakom',
+      sight_name: 'KUMARAKOM BIRD SANCTURY',
+      sight_image:
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/SIGHTSEEING/zt3imlnfbzrwqqd4h5kr',
+      carousel_images: [],
+      location: '',
+    },
+    {
+      id: 29,
+      place_id: 'kumarakom',
+      sight_name: 'VEMBANAD LAKE',
+      sight_image:
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/SIGHTSEEING/zih0qanlhp1batpmnthx',
+      carousel_images: [],
+      location: '',
+    },
+    {
+      id: 29,
+      place_id: 'kumarakom',
+      sight_name: 'PATHIRAMANAL ISLAND',
+      sight_image:
+        'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/SIGHTSEEING/gbi5fqxm6czj3cd7fblk',
       carousel_images: [],
       location: '',
     },
