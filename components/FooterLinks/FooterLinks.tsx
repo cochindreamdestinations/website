@@ -91,7 +91,7 @@ export function FooterLinks() {
             variant="subtle"
             component={Link}
             aria-label="Youtube"
-            href="https://www.youtube.com/channel/UCq8LnG9DHyyHnCJtLFAQUcg"
+            href="https://www.youtube.com/@ReelsOnwheels-he4vf"
             target="_blank"
           >
             <MImage width={32} height={32} fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/youtube" />
@@ -125,7 +125,7 @@ export function FooterLinks() {
             variant="subtle"
             aria-label="Trip Advisor"
             component={Link}
-            href="https://www.tripadvisor.in/Profile/dreamdestinations"
+            href="https://www.tripadvisor.in/Profile/dreamdestinationscoc"
             target="_blank"
           >
             <MImage width={32} height={32} fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/tripadvisor" />
