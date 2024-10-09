@@ -118,6 +118,7 @@ export const getSightsBasedonId = async (id: string) => {
 
 export const addSightSeeingDefaults = async () => {
   'use server';
+  
   const data = [
     {
       id: 1,
@@ -291,7 +292,7 @@ export const addSightSeeingDefaults = async () => {
       location: '',
     },
     {
-      id: 33,
+      id: 77,
       place_id: 'vagamon',
       sight_name: 'VAGAMON LAKE',
       sight_image:
@@ -390,7 +391,7 @@ export const addSightSeeingDefaults = async () => {
       location: '',
     },
     {
-      id: 29,
+      id: 30,
       place_id: 'kumarakom',
       sight_name: 'PATHIRAMANAL ISLAND',
       sight_image:
