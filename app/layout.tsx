@@ -10,13 +10,64 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { SessionProvider } from 'next-auth/react';
 import { auth } from '@/auth';
+import Head from 'next/head';
+import { Viewport } from 'next';
 const WhatsAppFAB = dynamic(() => import('@/components/FAB/WhatsAppButton'))
 
 
 export const metadata = {
   title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
   description: 'High Quality and Most Affordable tour cabs services kerala',
+  twitter:{
+    card:'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r',
+    url: 'https://cochindreamdestinations.in',
+    title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
+    description:'High Quality, Highly Trusted and Most Affordable tour cabs services kerala'
+  },
+  openGraph: {
+    title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
+    description: 'High Quality, Highly Trusted and Most Affordable tour cabs services kerala',
+    url: 'https://cochindreamdestinations.in',
+    siteName: 'Cochin Dream Destinations Taxi Service',
+    images: [
+      {
+        url: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+    videos: [
+      {
+        url: 'https://nextjs.org/video.mp4', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
+    audio: [
+      {
+        url: 'https://nextjs.org/audio.mp3', // Must be an absolute URL
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
+
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
+}
 
 export default async function RootLayout({ children }: { children: any }) {
   const session = await auth();
@@ -24,7 +75,7 @@ export default async function RootLayout({ children }: { children: any }) {
   return (
     <SessionProvider session={session}>
       <html lang="en">
-        <head>
+        <Head>
           <ColorSchemeScript />
           <link rel="shortcut icon" href="/favicon.svg" />
           <link
@@ -32,35 +83,9 @@ export default async function RootLayout({ children }: { children: any }) {
             href="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/movn7u4wkdnpm3tivrk3"
             as="image"
           />
-          <meta
-            name="viewport"
-            content="minimum-scale=1, maximum-scale=2, initial-scale=1, width=device-width, user-scalable=no"
-          />
+         
 
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://cochindreamdestinations.in/" />
-          <meta
-            property="og:title"
-            content="Cochin Dream Destinations | Kerala Taxi Cab Services"
-          />
-          <meta
-            property="og:description"
-            content="High Quality and Most Affordable tour cabs services in kerala"
-          />
-          <meta property="og:image" content="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" />
-
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://cochindreamdestinations.in/" />
-          <meta
-            property="twitter:title"
-            content="Cochin Dream Destinations | Kerala Taxi Cab Services"
-          />
-          <meta
-            property="twitter:description"
-            content="High Quality and Most Affordable tour cabs services in kerala"
-          />
-          <meta property="twitter:image" content="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" />
-        </head>
+          </Head>
         <body>
           <MantineProvider theme={theme}>
             <SpeedInsights />

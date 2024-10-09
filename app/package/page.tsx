@@ -582,6 +582,50 @@ const carData = [
   },
 ];
 
+export const metadata = {
+  title: 'Cochin Dream Destinations | Kerala Taxi Packages',
+  description: 'List of available taxi service packages with Cochin dream destinations',
+  twitter: {
+    card: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r',
+    url: 'https://cochindreamdestinations.in/package',
+    title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
+    description: 'List of available taxi service packages with Cochin dream destinations',
+  },
+  openGraph: {
+    title: 'Cochin Dream Destinations | Kerala Taxi Cab Services',
+    description: 'List of available taxi service packages with Cochin dream destinations',
+    url: 'https://cochindreamdestinations.in/package',
+    siteName: 'Cochin Dream Destinations Taxi Service',
+    images: [
+      {
+        url: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+    videos: [
+      {
+        url: 'https://nextjs.org/video.mp4', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
+    audio: [
+      {
+        url: 'https://nextjs.org/audio.mp3', // Must be an absolute URL
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
 export default async function Pricing() {
   const imgres = await fetch(
     'https://cochindreamdestinations.vercel.app/api/public/packages/carousel',
@@ -596,38 +640,6 @@ export default async function Pricing() {
     <div key={item.id} id={item.vehicle_type}>
       <Head>
         <title>Cochin Dream Destinations | Kerala Taxi Cab Services | Packages</title>
-        <meta
-          name="title"
-          content="Cochin Dream Destinations | Kerala Taxi Cab Services | Packages"
-        />
-        <meta
-          name="description"
-          content="Various taxi packages curated according to client requirement. More than 10 years of experience in tourism sector with high number of satisfied clients"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://cochindreamdestinations.in/package" />
-        <meta
-          property="og:title"
-          content="Cochin Dream Destinations | Kerala Taxi Cab Services | Packages"
-        />
-        <meta
-          property="og:description"
-          content="Various taxi packages curated according to client requirement. More than 10 years of experience in tourism sector with high number of satisfied clients"
-        />
-        <meta property="og:image" content="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://cochindreamdestinations.in/package" />
-        <meta
-          property="twitter:title"
-          content="Cochin Dream Destinations | Kerala Taxi Cab Services | Packages"
-        />
-        <meta
-          property="twitter:description"
-          content="Various taxi packages curated according to client requirement. More than 10 years of experience in tourism sector with high number of satisfied clients"
-        />
-        <meta property="twitter:image" content="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r" />
       </Head>
       {isImagesExistForId(item.vehicle_type) && (
         <ServerCarousel

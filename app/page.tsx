@@ -65,14 +65,14 @@ export default async function HomePage() {
       <ServerCarousel
         title="Happy Customers"
         data={[
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/upload/pvrgrt2q2izkjzpsfrwa',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/upload/tec5on0ftdlzsjney5hl',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/upload/pwshsq2ws3b7v77xtmrk',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145449_lapc0l',//webp
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145459_b6ofr5',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145431_md6kgc',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145443_sreyh5',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145440_ma1g5f'
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Reviews/resized/t2wgyjzb5qdri1o0720e',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Reviews/resized/c6vemjeejldww3aq2h81',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Reviews/resized/m1gmbkjtlritllvelcbw',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Reviews/resized/b0io6kt1cwqjhnevzo3f',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Reviews/resized/sxpaqcqkepnbdumh1psn',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Reviews/resized/dxwxnsex96pubmbo2cqi',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145440_ma1g5f',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145443_sreyh5'
         ]}
       />
     </>
