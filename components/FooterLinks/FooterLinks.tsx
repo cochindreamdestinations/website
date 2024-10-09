@@ -102,7 +102,7 @@ export function FooterLinks() {
             variant="subtle"
             aria-label="Facebook"
             component={Link}
-            href="https://www.youtube.com/@ReelsOnwheels-he4vf"
+            href="https://www.facebook.com/people/Cochin-Dreamdestinations/pfbid0nR9jSFVQ8WvLTkz4YyWhfGVjyz3r6WwmVZUi16vFCs5FsC1dH6of4CNHBAHKVruLl/?mibextid=ZbWKwL"
             target="_blank"
           >
            <MImage width={32} height={32} fit="contain" alt='Facebook' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/facebook" />
