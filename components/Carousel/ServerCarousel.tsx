@@ -28,6 +28,12 @@ export default function ServerCarousel({ data, title, size }: any) {
         height={250}
         loop
         align="start"
+        previousControlProps={{
+          'aria-label': 'Previous',
+        }}
+        nextControlProps={{
+          'aria-label': 'Next',
+        }}
       >
         {slides}
       </Carousel>
