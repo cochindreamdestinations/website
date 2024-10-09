@@ -14,6 +14,7 @@ export default function WhatsAppFAB() {
         component={Link}
         href="https://wa.me/+918547992024"
         target="_blank"
+        aria-label='Whatsapp Icon'
       >
         <RiWhatsappFill size={30} name="WHatsapp button" />
       </ActionIcon>

@@ -94,7 +94,7 @@ export function FooterLinks() {
             href="https://www.youtube.com/channel/UCq8LnG9DHyyHnCJtLFAQUcg"
             target="_blank"
           >
-            <MImage fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/youtube" />
+            <MImage width={32} height={32} fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/youtube" />
           </ActionIcon>
           <ActionIcon
             size="lg"
@@ -105,7 +105,7 @@ export function FooterLinks() {
             href="https://www.youtube.com/@ReelsOnwheels-he4vf"
             target="_blank"
           >
-           <MImage fit="contain" alt='Facebook' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/facebook" />
+           <MImage width={32} height={32} fit="contain" alt='Facebook' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/facebook" />
            </ActionIcon>
           <ActionIcon
             size="lg"
@@ -116,7 +116,7 @@ export function FooterLinks() {
             href="https://www.instagram.com/cochindreamdestinations"
             target="_blank"
           >
-            <MImage fit="contain" alt='Instagram' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/instagram" />
+            <MImage width={32} height={32} fit="contain" alt='Instagram' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/instagram" />
             </ActionIcon>
 
           <ActionIcon
@@ -128,7 +128,7 @@ export function FooterLinks() {
             href="https://www.tripadvisor.in/Profile/dreamdestinations"
             target="_blank"
           >
-            <MImage fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/tripadvisor" />
+            <MImage width={32} height={32} fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/tripadvisor" />
             </ActionIcon>
         </Group>
       </Container>

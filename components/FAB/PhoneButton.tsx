@@ -14,6 +14,7 @@ export default function PhoneFAB() {
         component={Link}
         href="tel:+918281611024"
         target="_blank"
+        aria-label='Phone Icon'
       >
         <FaPhone size={30} name="Phone button" />
       </ActionIcon>
