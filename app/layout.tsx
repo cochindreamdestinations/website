@@ -25,11 +25,39 @@ export default async function RootLayout({ children }: { children: any }) {
         <head>
           <ColorSchemeScript />
           <link rel="shortcut icon" href="/favicon.svg" />
-          <link rel="preload" href="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/movn7u4wkdnpm3tivrk3" as="image" />
+          <link
+            rel="preload"
+            href="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Innova/movn7u4wkdnpm3tivrk3"
+            as="image"
+          />
           <meta
             name="viewport"
             content="minimum-scale=1, maximum-scale=2, initial-scale=1, width=device-width, user-scalable=no"
           />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://cochindreamdestinations.in/" />
+          <meta
+            property="og:title"
+            content="Cochin Dream Destinations | Kerala Taxi Cab Services"
+          />
+          <meta
+            property="og:description"
+            content="High Quality and Most Affordable tour cabs services in kerala"
+          />
+          <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://cochindreamdestinations.in/" />
+          <meta
+            property="twitter:title"
+            content="Cochin Dream Destinations | Kerala Taxi Cab Services"
+          />
+          <meta
+            property="twitter:description"
+            content="High Quality and Most Affordable tour cabs services in kerala"
+          />
+          <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
         </head>
         <body>
           <MantineProvider theme={theme}>

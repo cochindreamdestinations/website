@@ -1,7 +1,6 @@
 'use client';
-import { Text, Container, ActionIcon, Group, rem, Image } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import { FaTripadvisor } from 'react-icons/fa';
+import { Text, Container, ActionIcon, Group, rem, Image as MImage } from '@mantine/core';
+import Image from 'next/image';
 
 import classes from './FooterLinks.module.css';
 
@@ -95,7 +94,7 @@ export function FooterLinks() {
             href="https://www.youtube.com/channel/UCq8LnG9DHyyHnCJtLFAQUcg"
             target="_blank"
           >
-            <Image fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/youtube" />
+            <MImage fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/youtube" />
           </ActionIcon>
           <ActionIcon
             size="lg"
@@ -106,7 +105,7 @@ export function FooterLinks() {
             href="https://www.youtube.com/@ReelsOnwheels-he4vf"
             target="_blank"
           >
-           <Image fit="contain" alt='Facebook' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/facebook" />
+           <MImage fit="contain" alt='Facebook' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/facebook" />
            </ActionIcon>
           <ActionIcon
             size="lg"
@@ -117,7 +116,7 @@ export function FooterLinks() {
             href="https://www.instagram.com/cochindreamdestinations"
             target="_blank"
           >
-            <Image fit="contain" alt='Instagram' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/instagram" />
+            <MImage fit="contain" alt='Instagram' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/instagram" />
             </ActionIcon>
 
           <ActionIcon
@@ -129,7 +128,7 @@ export function FooterLinks() {
             href="https://www.tripadvisor.in/Profile/dreamdestinations"
             target="_blank"
           >
-            <Image fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/tripadvisor" />
+            <MImage fit="contain" alt='Youtube' src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/tripadvisor" />
             </ActionIcon>
         </Group>
       </Container>

@@ -67,10 +67,10 @@ export default async function HomePage() {
       <ServerCarousel
         title="Happy Customers"
         data={[
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145437_icw8pt',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145464_w7swyz',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145456_synj03',
-          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145449_lapc0l',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/upload/pvrgrt2q2izkjzpsfrwa',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/upload/tec5on0ftdlzsjney5hl',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/upload/pwshsq2ws3b7v77xtmrk',
+          'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145449_lapc0l',//webp
           'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145459_b6ofr5',
           'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145431_md6kgc',
           'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/1000145443_sreyh5',

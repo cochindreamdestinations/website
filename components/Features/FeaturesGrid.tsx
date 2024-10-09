@@ -47,7 +47,7 @@ export function Feature({ icon, title, description }: FeatureProps) {
   return (
     <div>
       
-      <Image src={icon} width={60} height={60} fit='contain'  />
+      <Image src={icon} width={60} height={60} fit='contain' alt={`${title} image`}  />
       <Text mt="sm" mb={7}>
         {title}
       </Text>
