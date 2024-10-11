@@ -45,7 +45,7 @@ export function FooterLinks() {
         
         className={classes.link}
         href={link.link}
-        onClick={(event) => event.preventDefault()}
+        
       >
         {link.label}
       </Link>
