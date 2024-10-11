@@ -111,9 +111,18 @@ export default async function RootLayout({ children }: { children: any }) {
             <Suspense
               fallback={
                 <nav>
-                  <ul>
+                  <ul dir='row'>
                     <li>
                       <a href="/">Home</a>
+                    </li>
+                    <li>
+                      <a href="/taxi">Taxi</a>
+                    </li>
+                    <li>
+                      <a href="/rentals">Rentals</a>
+                    </li>
+                    <li>
+                      <a href="/traveller">Traveller</a>
                     </li>
                   </ul>
                 </nav>

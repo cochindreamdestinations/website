@@ -1,17 +1,22 @@
 import { Urbania } from '@/actions/urbania';
+import LoadingChunk from '@/components/LoadingSkleton/LoadingChunkSkleton';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 
-import ServerCarousel from '@/components/Carousel/ServerCarousel';
-import CallUsNowButtons from '@/components/GetInTouch/CallUsNowButton';
-import RateTableComponent from '@/components/RateTable/RateTable';
-import UrbaniaHead from '@/components/UrbaniaHead/UrbaniaHead';
-import UrbaniaImage from '@/components/UrbaniaHead/UrbaniaImage';
+
+
+const ServerCarousel = dynamic(() => import('@/components/Carousel/ServerCarousel'));
+const CallUsNowButtons = dynamic(() => import('@/components/GetInTouch/CallUsNowButton'));
+const RateTableComponent = dynamic(() => import('@/components/RateTable/RateTable'))
+const UrbaniaHead = dynamic(() => import('@/components/UrbaniaHead/UrbaniaHead'))
+const UrbaniaImage = dynamic(() => import('@/components/UrbaniaHead/UrbaniaImage'))
 
 export default async function UrbaniaPage() {
-  const res = await fetch("https://cochindreamdestinations.vercel.app/api/public/urbania",{method:"GET"});
+  const res = await fetch("https://cochindreamdestinations.vercel.app/api/public/urbania", { method: "GET" });
   const results = await res.json();
-  const imgli = await fetch("https://cochindreamdestinations.vercel.app/api/public/urbania/carousel", {method:'GET'});
+  const imgli = await fetch("https://cochindreamdestinations.vercel.app/api/public/urbania/carousel", { method: 'GET' });
   const imagesList = await imgli.json();
-  
+
   const components = results?.map((item: Urbania) => (
     <div key={item.id} id={item.id}>
       <ServerCarousel
@@ -29,9 +34,14 @@ export default async function UrbaniaPage() {
   ));
   return (
     <>
-      <UrbaniaImage />
-      <UrbaniaHead />
-      {components}
+      <Suspense fallback={<div>Loading image...</div>}>
+        <UrbaniaImage />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>      <UrbaniaHead />
+      </Suspense>
+      <Suspense fallback={<LoadingChunk />}>
+        {components}
+      </Suspense>
     </>
   );
 }
