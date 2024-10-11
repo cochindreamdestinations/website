@@ -22,17 +22,17 @@ const data = [
     links: [
       { label: 'Traveller', link: '/traveller' },
       { label: 'Urbania', link: '/urbania' },
-      { label: 'Changelog', link: '#' },
-      { label: 'Releases', link: '#' },
+      { label: 'Bus', link: '/bus' },
+      { label: 'Taxi', link: '/taxi' },
     ],
   },
   {
     title: 'House Boat',
     links: [
       { label: 'House Boat booking', link: '/houseboat' },
-      { label: 'Follow on Twitter', link: '#' },
-      { label: 'Email newsletter', link: '#' },
-      { label: 'GitHub discussions', link: '#' },
+      { label: 'Testimonials', link: '/testimonials' },
+      { label: 'Places', link: '/places/kovalam' },
+      { label: 'Contact us', link: '#' },
     ],
   },
 ];
@@ -40,15 +40,15 @@ const data = [
 export function FooterLinks() {
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Text<'a'>
+      <Link
         key={index}
+        
         className={classes.link}
-        component="a"
         href={link.link}
         onClick={(event) => event.preventDefault()}
       >
         {link.label}
-      </Text>
+      </Link>
     ));
 
     return (
@@ -179,7 +179,7 @@ export function FooterLinks() {
               src="https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/fq3p33arpcoppsqfkneq"
             />
           </ActionIcon>
-          
+
         </Group>
       </Container>
       <Container>

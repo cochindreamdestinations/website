@@ -8,7 +8,7 @@ import { Suspense } from 'react';
 import LoadingSkleton from '@/components/LoadingSkleton/LoadingSkleton';
 import LoadingChunk from '@/components/LoadingSkleton/LoadingChunkSkleton';
 
-const TestimonialCarousel = dynamic(() => import('@/components/Carousel/Testimonial'));
+const ReviewCarousel = dynamic(() => import('@/components/GoogleReviews/ReviewCarsousel'));
 const ServerCarousel = dynamic(() => import('@/components/Carousel/ServerCarousel'));
 const WhatsAppFAB = dynamic(() => import('@/components/FAB/WhatsAppButton'));
 const PhoneFAB = dynamic(() => import('@/components/FAB/PhoneButton'));
@@ -97,10 +97,11 @@ export default async function HomePage() {
       </Suspense>
 
       <Suspense fallback={<LoadingSkleton />}>
-        <TestimonialCarousel data={reviews} title="Testimonials" />
+        <ReviewCarousel/>
       </Suspense>
 
       <GetInTouch />
+      
 
       <ServerCarousel
         title="Happy Customers"

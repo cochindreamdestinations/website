@@ -3248,6 +3248,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@smastrom/react-rating@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@smastrom/react-rating@npm:1.5.0"
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  checksum: c8172b243a69e38736c211c3eaf5014bc84ee902ee134903a9095cb6087f0aa869552ad3d12909ff91f6386a778d837b538a6e439bfa33c8cda0ebd00821ab80
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-actions@npm:7.6.15":
   version: 7.6.15
   resolution: "@storybook/addon-actions@npm:7.6.15"
@@ -11437,6 +11447,7 @@ __metadata:
     "@next/bundle-analyzer": "npm:^14.0.1"
     "@next/eslint-plugin-next": "npm:^14.0.1"
     "@prisma/client": "npm:5.18.0"
+    "@smastrom/react-rating": "npm:^1.5.0"
     "@storybook/addon-essentials": "npm:^7.5.2"
     "@storybook/addon-styling-webpack": "npm:^0.0.5"
     "@storybook/blocks": "npm:^7.5.2"
