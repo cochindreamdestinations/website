@@ -843,7 +843,7 @@ const travellerData = [
 ];
 
 export const metadata = {
-  title: 'Cochin Dream Destinations | Kerala Traveller Packages',
+  title: 'Kerala Tempo Traveller Rentals | Cochin Dream Destinations | Kerala Traveller Packages',
   description: 'List of available traveller service packages with Cochin dream destinations',
   twitter: {
     card: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/Logo/kpg21czdrjbzclztwj5r',
@@ -852,7 +852,7 @@ export const metadata = {
     description: 'List of available traveller service packages with Cochin dream destinations',
   },
   openGraph: {
-    title: 'Cochin Dream Destinations | Kerala Traveller Packages',
+    title: 'Kerala Tempo Traveller Rentals | Cochin Dream Destinations | Kerala Traveller Packages',
     description: 'List of available traveller service packages with Cochin dream destinations',
     url: 'https://cochindreamdestinations.in/traveller',
     siteName: 'Cochin Dream Destinations Taxi Service',
