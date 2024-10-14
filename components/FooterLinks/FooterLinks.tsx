@@ -85,6 +85,7 @@ export function FooterLinks() {
             style={{ border: 0 }}
             allowFullScreen={false}
             loading="lazy"
+            title='Google map location of Cochin Dream Destinations Office'
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
