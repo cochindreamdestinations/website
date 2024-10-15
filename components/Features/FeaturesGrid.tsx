@@ -1,4 +1,4 @@
-import { ThemeIcon, Text, Title, Container, SimpleGrid,  Image} from '@mantine/core';
+import { ThemeIcon, Text, Title, Container, SimpleGrid, Image } from '@mantine/core';
 // import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock } from '@tabler/icons-react';
 import classes from './FeaturesGrid.module.css';
 
@@ -20,7 +20,7 @@ export const MOCKDATA = [
       'All our drivers are staffs of our organiztion and each of them have gone through police verification',
   },
   {
-    icon: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/security',
+    icon: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/secure_by_default',
     title: 'Secure by default',
     description:
       'All our drivers can manage English and Malayalam. Also each of them have gone through Police verification for criminal history',
@@ -33,8 +33,8 @@ export const MOCKDATA = [
   {
     icon: 'https://res.cloudinary.com/dtgoc3cww/image/upload/f_auto,q_auto/v1/icons/customer_feedback',
     title: 'Customer Feedbacks',
-    description: 'Customer feedback from Google maps. No more faking from the users'
-  }
+    description: 'Customer feedback from Google maps. No more faking from the users',
+  },
 ];
 
 interface FeatureProps {
@@ -46,11 +46,10 @@ interface FeatureProps {
 export function Feature({ icon, title, description }: FeatureProps) {
   return (
     <div>
-      
-      <Image src={icon} width={60} height={60} fit='contain' alt={`${title} image`}  />
-      <Text mt="sm" mb={7}>
+      <Image src={icon} width={80} height={80} fit="contain" alt={`${title} image`} />
+      <Title order={3} mt="sm" mb={7} style={{textAlign:'center'}}>
         {title}
-      </Text>
+      </Title>
       <Text size="sm" c="dimmed" lh={1.6}>
         {description}
       </Text>
@@ -62,25 +61,27 @@ export function FeaturesGrid() {
   const features = MOCKDATA.map((feature, index) => <Feature {...feature} key={index} />);
 
   return (
-    <Container className={classes.wrapper}>
-      <Title className={classes.title}>
-        Kerala Taxi Packages-Kochi Taxi-Kerala Tempo Traveller
-      </Title>
+    <section style={{ background: `url('/feature-bg.webp')` }}>
+      <Container className={classes.wrapper}>
+        <Title className={classes.title}>
+          Kerala Taxi Packages-Kochi Taxi-Kerala Tempo Traveller
+        </Title>
 
-      <Container size={560} p={0}>
-        <Text size="sm" className={classes.description}>
-          Handled by industry experts with 10+ years in travel and tourism industry
-        </Text>
+        <Container size={560} p={0}>
+          <Text size="sm" className={classes.description}>
+            Handled by industry experts with 10+ years in travel and tourism industry
+          </Text>
+        </Container>
+
+        <SimpleGrid
+          mt={60}
+          cols={{ base: 1, sm: 2, md: 3 }}
+          spacing={{ base: 'xl', md: 50 }}
+          verticalSpacing={{ base: 'xl', md: 50 }}
+        >
+          {features}
+        </SimpleGrid>
       </Container>
-
-      <SimpleGrid
-        mt={60}
-        cols={{ base: 1, sm: 2, md: 3 }}
-        spacing={{ base: 'xl', md: 50 }}
-        verticalSpacing={{ base: 'xl', md: 50 }}
-      >
-        {features}
-      </SimpleGrid>
-    </Container>
+    </section>
   );
 }
