@@ -3,7 +3,7 @@
 import NoteCard from './NoteCard';
 import TableList from './TableList';
 
-export default async function RateTablePredata({ data, extra_km, description }: any) {
+export default function RateTablePredata({ data, extra_km, description }: any) {
   
   return (
     <>

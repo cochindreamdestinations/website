@@ -23,6 +23,18 @@ const HeaderSearch = dynamic(
           <li>
             <a href="/">Home</a>
           </li>
+          <li>
+            <a href="/taxi">Taxi</a>
+          </li>
+          <li>
+            <a href="/rentals">Rentals</a>
+          </li>
+          <li>
+            <a href="/traveller">Traveller</a>
+          </li>
+          <li>
+            <a href="/bus">Bus</a>
+          </li>
         </ul>
       </nav>
     ), // Optional: A fallback component to show while loading
@@ -111,7 +123,7 @@ export default async function RootLayout({ children }: { children: any }) {
             <Suspense
               fallback={
                 <nav>
-                  <ul dir='row'>
+                  <ul dir="row">
                     <li>
                       <a href="/">Home</a>
                     </li>

@@ -4,6 +4,7 @@ import CallUsNowButtons from '@/components/GetInTouch/CallUsNowButton';
 
 import RateTablePredata from '@/components/RateTable/RateTablePreData';
 import Head from 'next/head';
+import { Suspense } from 'react';
 
 const carData = [
   {
@@ -638,21 +639,21 @@ export default async function Pricing() {
 
   const components = carData?.map((item: TravellerWithData) => (
     <div key={item.id} id={item.vehicle_type}>
-      <Head>
-        <title>Cochin Dream Destinations | Kerala Taxi Cab Services | Packages</title>
-      </Head>
+      
       {isImagesExistForId(item.vehicle_type) && (
         <ServerCarousel
           title={item.description}
           data={imagesList.filter((i: any) => i.vehicle_type === item.vehicle_type)[0]?.list}
         />
       )}
-      <RateTablePredata
-        key={item.id}
-        data={item.data}
-        extra_km={item.extra_per_km}
-        description={item.description}
-      />
+      <Suspense fallback={<div>loading</div>}>
+        <RateTablePredata
+          key={item.id}
+          data={item.data}
+          extra_km={item.extra_per_km}
+          description={item.description}
+        />
+      </Suspense>
       <CallUsNowButtons />
     </div>
   ));
