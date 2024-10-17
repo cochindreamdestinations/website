@@ -3,107 +3,117 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://cochindreamdestinations.in/</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/taxi</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://cochindreamdestinations.in/sabarimala</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
-	<priority>0.1</priority>
-</url>
-<url>
-	<loc>https://cochindreamdestinations.in/package</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
+	<loc>https://cochindreamdestinations.in/rentals</loc>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/traveller</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
-	<priority>0.1</priority>
-</url>
-<url>
-	<loc>https://cochindreamdestinations.in/urbania</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
-	<priority>0.1</priority>
-</url>
-<url>
-	<loc>https://cochindreamdestinations.in/rentals</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
-	<priority>0.1</priority>
-</url>
-<url>
-	<loc>https://cochindreamdestinations.in/airport</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://cochindreamdestinations.in/houseboat</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/bus</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
+	<priority>0.1</priority>
+</url>
+<url>
+	<loc>https://cochindreamdestinations.in/sabarimala</loc>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
+	<priority>0.1</priority>
+</url>
+<url>
+	<loc>https://cochindreamdestinations.in/package</loc>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
+	<priority>0.1</priority>
+</url>
+<url>
+	<loc>https://cochindreamdestinations.in/urbania</loc>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
+	<priority>0.1</priority>
+</url>
+<url>
+	<loc>https://cochindreamdestinations.in/airport</loc>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://cochindreamdestinations.in/houseboat</loc>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/testimonials</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
-	<priority>1.0</priority>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/gallery</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
+	<priority>0.1</priority>
+</url>
+<url>
+	<loc>https://cochindreamdestinations.in/linktous</loc>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/terms</loc>
-	<lastmod>2024-10-09T19:07:48+01:00</lastmod>
-	<priority>0.1</priority>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://cochindreamdestinations.in/places/kochi</loc>
-	<lastmod>2024-10-09T19:07:54+01:00</lastmod>
+	<loc>https://cochindreamdestinations.in/other</loc>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/places/kovalam</loc>
-	<lastmod>2024-10-09T19:07:54+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:04+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
+	<loc>https://cochindreamdestinations.in/places/kochi</loc>
+	<lastmod>2024-10-17T15:04:08+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
 	<loc>https://cochindreamdestinations.in/places/munnar</loc>
-	<lastmod>2024-10-09T19:07:54+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:08+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/places/vagamon</loc>
-	<lastmod>2024-10-09T19:07:54+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:08+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/places/thekkady</loc>
-	<lastmod>2024-10-09T19:07:54+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:08+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/places/kanyakumari</loc>
-	<lastmod>2024-10-09T19:07:54+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:08+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/places/alappuzha</loc>
-	<lastmod>2024-10-09T19:07:54+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:08+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://cochindreamdestinations.in/places/kumarakom</loc>
-	<lastmod>2024-10-09T19:07:54+01:00</lastmod>
+	<lastmod>2024-10-17T15:04:08+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>
