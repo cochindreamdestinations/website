@@ -8,7 +8,7 @@ export async function generateMetadata({params}:any) {
   const result: PlaceDataType | null = await getPlaceWithId(id);
   return {
     title: `${result?.place} | Cochin Dream Destinations | Kerala Taxi Cab Services`,
-    description: `${result?.description} High Quality and Most Affordable tour cabs services kerala`,
+    description: `${result?.description.substring(0,140)} High Quality and Most Affordable tour cabs services kerala`,
     twitter: {
       card: result?.image,
       url: `https://cochindreamdestinations.in/places/${result?.id}`,
@@ -17,7 +17,7 @@ export async function generateMetadata({params}:any) {
     },
     openGraph: {
       title: `${result?.place} | Cochin Dream Destinations | Kerala Taxi Cab Services`,
-      description: result?.description,
+      description: result?.description.substring(0,140),
       url: `https://cochindreamdestinations.in/places/${result?.id}`,
       siteName: 'Cochin Dream Destinations Taxi Service',
       images: [
