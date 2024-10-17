@@ -50,7 +50,7 @@ export function SightSeeingCarousel({ data }: CarouselProps) {
   return (
     <Container my="md">
       <Center>
-        <Title className={oswald.className} size="h3">
+        <Title order={2} className={oswald.className} size="h3">
           SIGHTSEEING
         </Title>
       </Center>

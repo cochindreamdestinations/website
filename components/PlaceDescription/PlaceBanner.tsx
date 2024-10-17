@@ -14,7 +14,7 @@ const DEFAULT_IMAGE =
 export default async function PlaceBanner({ result }: PlaceBannerProps) {
   return (
     <Container my="md">
-      <Title size="h2" className={smoochSans.className}>
+      <Title order={2} size="h2" className={smoochSans.className}>
         EXPLORING DESTINATIONS WITH PASSION
       </Title>
       <Text>
@@ -36,7 +36,7 @@ export default async function PlaceBanner({ result }: PlaceBannerProps) {
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 8, sm: 9 }}>
           <Stack>
-            <Title size="h3" className={smoochSans.className}>
+            <Title order={1} size="h3" className={smoochSans.className}>
               {result?.place}
             </Title>
             <Text>{result?.description}</Text>

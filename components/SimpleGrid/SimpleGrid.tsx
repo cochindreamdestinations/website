@@ -26,7 +26,7 @@ const imageList = [
 ];
 
 const getChild = (height: number, index: number) => (
-  <Image height={height} radius="md" src={imageList[index]} />
+  <Image height={height} radius="md" src={imageList[index]} alt={`Image of Car ${index}`} />
 );
 const BASE_HEIGHT = 360;
 const getSubHeight = (children: number, spacing: number) =>
