@@ -62,7 +62,7 @@ export default function ListLinks() {
         Usefull links
       </Link>
       <Divider orientation="vertical" />
-      <Link href="#" role="link">
+      <Link href="/other" role="link">
         Other links
       </Link>
       <Divider orientation="vertical" />
