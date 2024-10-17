@@ -3,7 +3,7 @@ import { Container, List, Title } from '@mantine/core';
 export default function WhyBookUrbania() {
   return (
     <Container color="green" my="mx">
-      <Title component="h4" size="h4">
+      <Title order={4} component="h4" size="h4">
         Why book Premium Urbania with Pepper Kerala?
       </Title>
       <List>

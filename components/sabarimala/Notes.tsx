@@ -7,7 +7,7 @@ export default function Notes() {
   };
   return (
     <Container {...containerProps}>
-      <Title size="h4">Note:</Title>
+      <Title order={4} size="h4">Note:</Title>
       <List>
         <List.Item>Above rates are inclusive of toll, parking & driver bata.</List.Item>
         <List.Item>Above rates are subjected to change during festive/season days.</List.Item>
