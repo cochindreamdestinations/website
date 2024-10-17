@@ -45,7 +45,12 @@ const FooterLinks = dynamic(
   () => import('@/components/FooterLinks/FooterLinks').then((mod) => mod.FooterLinks),
   {
     ssr: false, // This option disables server-side rendering for this component
-    loading: () => <footer />, // Optional: A fallback component to show while loading
+    loading: () => <footer >
+      <ul>
+        <li><a href="https://www.alive2directory.com/">Alive 2 Directory.com</a></li>
+        <li><a href="https://www.greenydirectory.com/">Greeny Directory.com</a></li>
+      </ul>
+    </footer>, // Optional: A fallback component to show while loading
   }
 );
 
@@ -146,7 +151,12 @@ export default async function RootLayout({ children }: { children: any }) {
             <Suspense fallback={<button>whatsapp</button>}>
               <WhatsAppFAB />
             </Suspense>
-            <Suspense fallback={<footer></footer>}>
+            <Suspense fallback={<footer><footer >
+              <ul>
+                <li><a href="https://www.alive2directory.com/">Alive 2 Directory.com</a></li>
+                <li><a href="https://www.greenydirectory.com/">Greeny Directory.com</a></li>
+              </ul>
+            </footer></footer>}>
               <FooterLinks />
             </Suspense>
           </MantineProvider>
