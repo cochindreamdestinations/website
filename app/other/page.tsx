@@ -1,4 +1,5 @@
 import { Center, Title } from '@mantine/core';
+import Link from 'next/link';
 
 export const metadata = {
     title: 'Cochin Dream Destinations | Kerala Taxi Packages | Other Links',
@@ -57,15 +58,15 @@ export default function OtherLinks() {
         </tr>
         <tr>
             <td>Green Directory</td>
-            <td><a href="https://www.greenydirectory.com/">Greeny Directory.com</a></td>
+            <td><Link href="https://www.greenydirectory.com/">Greeny Directory.com</Link></td>
         </tr>
         <tr>
             <td>Alive to us</td>
-            <td><a href="https://www.alive2directory.com/">Alive 2 Directory.com</a></td>
+            <td><Link href="https://www.alive2directory.com/">Alive 2 Directory.com</Link></td>
         </tr>
         <tr>
             <td>Another Link</td>
-            <td><a href="https://www.direct-directory.com/">Direct-Directory.com</a></td>
+            <td><Link href="https://www.direct-directory.com/">Direct-Directory.com</Link></td>
         </tr>
         <tr>
             <td>Row 4, Cell 1</td>
