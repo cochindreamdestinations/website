@@ -1,4 +1,3 @@
-import { Center, Title } from '@mantine/core';
 import Link from 'next/link';
 
 export const metadata = {
@@ -48,9 +47,16 @@ export const metadata = {
 export default function OtherLinks() {
   return (
     <>
-      <Center>
-        <Title order={1} size="h2">Other Links</Title>
-      </Center>
+     
+      <h1>Other Links</h1>
+      <ul>
+        <li><Link href="https://www.greenydirectory.com/">Greeny Directory.com</Link></li>
+        <li><Link href="https://www.alive2directory.com/">Alive 2 Directory.com</Link></li>
+        <li><Link href="https://www.direct-directory.com/">Direct-Directory.com</Link></li>
+        <li><a href="https://www.greenydirectory.com/">Greeny Directory.com</a></li>
+        <li><a href="https://www.alive2directory.com/">Alive 2 Directory.com</a></li>
+        <li><a href="https://www.direct-directory.com/">Direct-Directory.com</a></li>
+      </ul>
       <table>
         <tr>
             <th>Title</th>
