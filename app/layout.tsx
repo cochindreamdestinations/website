@@ -49,6 +49,7 @@ const FooterLinks = dynamic(
       <ul>
         <li><a href="https://www.alive2directory.com/">Alive 2 Directory.com</a></li>
         <li><a href="https://www.greenydirectory.com/">Greeny Directory.com</a></li>
+        <li><a href="https://www.direct-directory.com/">Direct-Directory.com</a></li>
       </ul>
     </footer>, // Optional: A fallback component to show while loading
   }
@@ -155,6 +156,7 @@ export default async function RootLayout({ children }: { children: any }) {
               <ul>
                 <li><a href="https://www.alive2directory.com/">Alive 2 Directory.com</a></li>
                 <li><a href="https://www.greenydirectory.com/">Greeny Directory.com</a></li>
+                <li><a href="https://www.direct-directory.com/">Direct-Directory.com</a></li>
               </ul>
             </footer></footer>}>
               <FooterLinks />

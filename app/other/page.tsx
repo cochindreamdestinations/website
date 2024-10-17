@@ -64,8 +64,8 @@ export default function OtherLinks() {
             <td><a href="https://www.alive2directory.com/">Alive 2 Directory.com</a></td>
         </tr>
         <tr>
-            <td>Row 3, Cell 1</td>
-            <td>Row 3, Cell 2</td>
+            <td>Another Link</td>
+            <td><a href="https://www.direct-directory.com/">Direct-Directory.com</a></td>
         </tr>
         <tr>
             <td>Row 4, Cell 1</td>
