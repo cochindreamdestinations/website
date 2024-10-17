@@ -1,3 +1,5 @@
 export default function Airport() {
-  return <>Airport</>;
+  return <>
+    <h1> Airport taxi Kochi </h1>
+  </>;
 }
