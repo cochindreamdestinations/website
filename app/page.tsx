@@ -113,7 +113,7 @@ export const metadata = {
 
 
 export default async function HomePage() {
-  const reviews = await getReviews();
+  
 
   return (
     <>

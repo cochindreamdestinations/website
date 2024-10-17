@@ -83,7 +83,7 @@ export default function ReviewCarousel() {
 
     return (<>
         <Center>
-            <Title className={quicksand.className} size="h3">
+            <Title order={3} className={quicksand.className} size="h3">
                 Testimonials
             </Title>
         </Center>

@@ -63,7 +63,7 @@ export function FeaturesGrid() {
   return (
     <section style={{ background: `url('/feature-bg.webp')`,backgroundRepeat: 'no-repeat' }}>
       <Container className={classes.wrapper}>
-        <Title className={classes.title}>
+        <Title order={1} className={classes.title}>
           Kerala Taxi Packages-Kochi Taxi-Kerala Tempo Traveller
         </Title>
 

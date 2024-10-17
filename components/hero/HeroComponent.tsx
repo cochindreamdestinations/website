@@ -9,7 +9,7 @@ export function HeroImageBackground() {
       <Overlay color="#000" opacity={0.65} zIndex={1} />
 
       <div className={classes.inner}>
-        <Title className={classes.title}>
+        <Title order={2} size="h1" className={classes.title}>
         Cochin Dream Destinations | Kerala Cab Services
           <Text component="span" inherit className={classes.highlight}></Text>
         </Title>
