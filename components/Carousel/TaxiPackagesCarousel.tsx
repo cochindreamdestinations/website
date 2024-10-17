@@ -54,7 +54,7 @@ export function TaxiPackagesCarousel({ data }: CarouselProps) {
   return (
     <Container my="lg">
       <Center>
-        <Title className={oswald.className} size="h3">
+        <Title order={3} className={oswald.className} size="h3">
           Kerala Taxi Packages-Kochi Taxi-Kerala Tempo Traveller
         </Title>
       </Center>
