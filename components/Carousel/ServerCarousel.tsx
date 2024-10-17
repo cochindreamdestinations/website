@@ -18,7 +18,7 @@ export default function ServerCarousel({ data, title, size }: any) {
   return (
     <>
       <Center>
-        <Title size={size || 'h5'} className={quicksand.className}>
+        <Title order={2} size={size || 'h5'} className={quicksand.className}>
           {title}
         </Title>
       </Center>

@@ -7,7 +7,7 @@ export default function TempoTravellerHeading() {
   return (
     <Container my="md">
       <Center>
-        <Title size="h2" style={{ color: 'green' }}>
+        <Title order={1} size="h2" style={{ color: 'green' }}>
           Kerala Tempo Traveller Rentals
         </Title>
       </Center>

@@ -7,7 +7,7 @@ export default function BusHead() {
     <>
       <Container my="md">
         <Center>
-          <Title size="h2">Kerala Bus Rentals</Title>
+          <Title order={1} size="h2">Kerala Bus Rentals</Title>
         </Center>
       </Container>
       <Grid>

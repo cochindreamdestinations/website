@@ -8,7 +8,7 @@ export default function UrbaniaHead() {
     <>
       <Container my="md">
         <Center>
-          <Title size="h2">Kerala Urbania Rentals</Title>
+          <Title order={1} size="h2">Kerala Urbania Rentals</Title>
         </Center>
       </Container>
       <Grid>

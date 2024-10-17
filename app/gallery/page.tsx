@@ -5,7 +5,7 @@ export default function Gallery() {
   return (
     <>
       <Center>
-        <Title size="h2">Vehicle Gallery</Title>
+        <Title order={1} size="h2">Vehicle Gallery</Title>
       </Center>
       <Subgrid />
     </>
