@@ -50,7 +50,7 @@ export default function ListLinks() {
         Gallery
       </Link>
       <Divider orientation="vertical" />
-      <Link href="#" role="link">
+      <Link href="/linktous" role="link">
         Link to Us
       </Link>
       <Divider orientation="vertical" />

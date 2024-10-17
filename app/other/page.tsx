@@ -60,8 +60,8 @@ export default function OtherLinks() {
             <td><a href="https://www.greenydirectory.com/">Greeny Directory.com</a></td>
         </tr>
         <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
+            <td>Alive to us</td>
+            <td><a href="https://www.alive2directory.com/">Alive 2 Directory.com</a></td>
         </tr>
         <tr>
             <td>Row 3, Cell 1</td>
