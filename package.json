@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "@next/eslint-plugin-next": "^14.0.1",
     "@storybook/addon-essentials": "^7.5.2",
     "@storybook/addon-styling-webpack": "^0.0.5",
