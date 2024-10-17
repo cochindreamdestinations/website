@@ -16,8 +16,8 @@ export default function GoogleReviewCard(item: ReviewItem) {
         <div >
             <Card shadow="sm" padding="lg" radius="md" withBorder>
                 <Group mt="md" mb="xs">
-                    {item.profile_pic && <Avatar src={item.profile_pic} radius="xl" size="lg" />}
-                    {!item.profile_pic && <Avatar color="cyan" radius="xl" size="lg">
+                    {item.profile_pic && <Avatar src={item.profile_pic} radius="xl" size="lg" alt={`${item.user_name}'s photo`} />}
+                    {!item.profile_pic && <Avatar color="cyan" radius="xl" size="lg" alt={`${item.user_name}'s avatar`}>
                         {item.user_name?.charAt(0)}
                     </Avatar>
                     }
