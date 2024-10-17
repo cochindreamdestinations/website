@@ -8,7 +8,7 @@ export default function Heading() {
   return (
     <Container my="md">
       <Center>
-        <Title size="h2">
+        <Title order={1}>
           Sabarimala Taxi Services From Cochin (Kochi) - శబరిమల టాక్సీ సర్వీస్
         </Title>
       </Center>
@@ -16,7 +16,7 @@ export default function Heading() {
         <span className={classes.borderOrange}></span>
       </Center>
       <Center>
-        <Title size="h4">
+        <Title order={2}>
           Cochin to Sabarimala (Pamba) Taxi Booking - కొచ్చిన్ టు శబరిమల (పంబా) టాక్సీ బుకింగ్
         </Title>
       </Center>
@@ -35,7 +35,7 @@ export default function Heading() {
       <KochiToSabariMalaTable />
       <Notes />
       <Center>
-        <Title size="h4">Cochin to Guruvayoor to Sabarimala to Cochin Taxi Service</Title>
+        <Title order={2}>Cochin to Guruvayoor to Sabarimala to Cochin Taxi Service</Title>
       </Center>
       <Center>
         <List>
