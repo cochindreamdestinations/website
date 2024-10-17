@@ -61,7 +61,7 @@ export function FeaturesGrid() {
   const features = MOCKDATA.map((feature, index) => <Feature {...feature} key={index} />);
 
   return (
-    <section style={{ background: `url('/feature-bg.webp')` }}>
+    <section style={{ background: `url('/feature-bg.webp')`,backgroundRepeat: 'no-repeat' }}>
       <Container className={classes.wrapper}>
         <Title className={classes.title}>
           Kerala Taxi Packages-Kochi Taxi-Kerala Tempo Traveller
