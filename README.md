@@ -6,6 +6,7 @@
 [Cochin dream destinations](https://cochindreamdestinations.in)
 
 ## Features
+Uses React Server components
 
 This template comes with the following features:
 
