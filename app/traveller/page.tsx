@@ -6,7 +6,6 @@ import getAllTravelerInsideImages, {
 } from '@/actions/traveller';
 import ServerCarousel from '@/components/Carousel/ServerCarousel';
 import CallUsNowButtons from '@/components/GetInTouch/CallUsNowButton';
-import RateTableComponent from '@/components/RateTable/RateTable';
 import RateTablePredata from '@/components/RateTable/RateTablePreData';
 import TempoTravellerHeading from '@/components/TempTravellerHeading/TempoTravellerHeading';
 
