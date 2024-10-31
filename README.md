@@ -1,6 +1,7 @@
-# Cochin Dream Destinations website
+# Cochin Dream Destinations Website
 
 > Created using next.js and latest manine UI
+> Project is deployed in vercel
 
 [Cochin dream destinations](https://cochindreamdestinations.in)
 
